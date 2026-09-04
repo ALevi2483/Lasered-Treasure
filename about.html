@@ -1,1 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Lasered Treasure</title>
+
+    <meta
+        name="description"
+        content="Learn about Lasered Treasure, a woman-owned custom laser engraving business in Portsmouth, Virginia creating personalized gifts, awards, keepsakes and custom projects."
+    >
+
+    <meta
+        name="keywords"
+        content="Lasered Treasure Portsmouth VA, laser engraving Portsmouth, woman owned business Portsmouth, custom engraving Hampton Roads"
+    >
+
+    <meta name="author" content="Lasered Treasure">
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="About Lasered Treasure"
+    >
+
+    <meta
+        property="og:description"
+        content="Learn more about Lasered Treasure and our approach to custom laser engraving in Portsmouth, Virginia."
+    >
+
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:url"
+        content="https://laseredtreasure.com/about.html"
+    >
+
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/styles.css"
+    >
+
+
+    <!-- Page Specific Styles -->
+
+    <style>
+
+        /* =============================================
+           STORY SECTION
+        ============================================= */
+
+        .about-story {
+            padding: 100px 0;
+
+            background: var(--cream);
+        }
+
+
+        .about-story-grid {
+            display: grid;
+
+            grid-template-columns:
+                0.95fr 1.05fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .about-story-image {
+            position: relative;
+
+            min-height: 590px;
+
+            overflow: hidden;
+
+            background: #d8d0c5;
+        }
+
+
+        .about-story-image img {
+            width: 100%;
+            height: 100%;
+
+            min-height: 590px;
+
+            object-fit: cover;
+        }
+
+
+        .about-image-accent {
+            position: absolute;
+
+            right: -1px;
+            bottom: -1px;
+
+            width: 150px;
+            height: 150px;
+
+            background: var(--gold);
+
+            clip-path:
+                polygon(
+                    100% 0,
+                    100% 100%,
+                    0 100%
+                );
+        }
+
+
+        .about-story-copy h2 {
+            margin-bottom: 24px;
+
+            font-size:
+                clamp(2.3rem, 4vw, 3.8rem);
+
+            font-weight: 800;
+
+            letter-spacing: -0.05em;
+        }
+
+
+        .about-story-copy p {
+            color: var(--text-medium);
+
+            line-height: 1.8;
+        }
+
+
+        .about-owner-name {
+            margin-top: 32px;
+
+            padding-top: 26px;
+
+            border-top:
+                1px solid var(--border-light);
+        }
+
+
+        .about-owner-name strong {
+            display: block;
+
+            margin-bottom: 4px;
+
+            font-size: 1.05rem;
+        }
+
+
+        .about-owner-name span {
+            color: var(--gold-dark);
+
+            font-size: 0.78rem;
+            font-weight: 800;
+
+            letter-spacing: 0.06em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =============================================
+           VALUES
+        ============================================= */
+
+        .about-values {
+            padding: 100px 0;
+
+            background: var(--white);
+        }
+
+
+        .values-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+
+        .value-card {
+            min-height: 275px;
+
+            padding: 34px 28px;
+
+            background: var(--cream);
+
+            border:
+                1px solid rgba(110, 83, 48, 0.12);
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .value-card:hover {
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(198, 146, 60, 0.5);
+
+            box-shadow: var(--shadow-soft);
+        }
+
+
+        .value-number {
+            margin-bottom: 24px;
+
+            color: var(--gold);
+
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+
+        .value-card h3 {
+            margin-bottom: 13px;
+
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+
+        .value-card p {
+            margin-bottom: 0;
+
+            color: var(--text-medium);
+
+            font-size: 0.91rem;
+        }
+
+
+
+        /* =============================================
+           LOCAL SECTION
+        ============================================= */
+
+        .local-section {
+            padding: 100px 0;
+
+            color: var(--white);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b0b0a,
+                    #181612
+                );
+        }
+
+
+        .local-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .local-copy h2 {
+            margin-bottom: 22px;
+
+            font-size:
+                clamp(2.2rem, 4vw, 3.6rem);
+
+            font-weight: 800;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .local-copy p {
+            color: #c8c2b8;
+
+            line-height: 1.8;
+        }
+
+
+        .local-details {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+
+        .local-detail {
+            padding: 22px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.12);
+
+            background:
+                rgba(255, 255, 255, 0.03);
+        }
+
+
+        .local-detail strong {
+            display: block;
+
+            margin-bottom: 4px;
+
+            color: var(--gold-light);
+
+            font-size: 0.75rem;
+
+            letter-spacing: 0.07em;
+
+            text-transform: uppercase;
+        }
+
+
+        .local-detail span {
+            color: var(--white);
+
+            font-size: 0.92rem;
+        }
+
+
+        .local-image {
+            min-height: 470px;
+
+            overflow: hidden;
+        }
+
+
+        .local-image img {
+            width: 100%;
+            height: 100%;
+
+            min-height: 470px;
+
+            object-fit: cover;
+        }
+
+
+
+        /* =============================================
+           CUSTOM DIFFERENCE
+        ============================================= */
+
+        .custom-difference {
+            padding: 100px 0;
+
+            background: var(--cream);
+        }
+
+
+        .difference-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 25px;
+        }
+
+
+        .difference-card {
+            padding: 36px 30px;
+
+            background: var(--white);
+
+            border-top:
+                4px solid var(--gold);
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.05);
+        }
+
+
+        .difference-card h3 {
+            margin-bottom: 15px;
+
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+
+        .difference-card p {
+            margin-bottom: 0;
+
+            color: var(--text-medium);
+        }
+
+
+
+        /* =============================================
+           OWNER QUOTE
+        ============================================= */
+
+        .owner-quote {
+            padding: 95px 0;
+
+            background: var(--white);
+        }
+
+
+        .owner-quote-box {
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            padding: 50px 55px;
+
+            text-align: center;
+
+            border:
+                1px solid var(--border-light);
+
+            background: var(--cream);
+        }
+
+
+        .quote-mark {
+            margin-bottom: 15px;
+
+            color: var(--gold);
+
+            font-family: Georgia, serif;
+            font-size: 4rem;
+
+            line-height: 0.8;
+        }
+
+
+        .owner-quote-box blockquote {
+            margin:
+                0 auto 25px;
+
+            max-width: 720px;
+
+            color: var(--text-dark);
+
+            font-family: var(--font-display);
+            font-size:
+                clamp(1.35rem, 2.5vw, 1.9rem);
+
+            line-height: 1.5;
+        }
+
+
+        .owner-quote-box cite {
+            color: var(--text-medium);
+
+            font-style: normal;
+            font-size: 0.8rem;
+            font-weight: 700;
+
+            letter-spacing: 0.05em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =============================================
+           RESPONSIVE
+        ============================================= */
+
+        @media (max-width: 940px) {
+
+            .about-story-grid,
+            .local-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .values-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .difference-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-story-image,
+            .about-story-image img {
+                min-height: 480px;
+            }
+
+
+            .local-image,
+            .local-image img {
+                min-height: 380px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .about-story,
+            .about-values,
+            .local-section,
+            .custom-difference,
+            .owner-quote {
+                padding:
+                    70px 0;
+            }
+
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .value-card {
+                min-height: 0;
+            }
+
+
+            .local-details {
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-story-image,
+            .about-story-image img {
+                min-height: 360px;
+            }
+
+
+            .local-image,
+            .local-image img {
+                min-height: 320px;
+            }
+
+
+            .owner-quote-box {
+                padding:
+                    38px 24px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <!-- Logo -->
+
+        <a
+            href="index.html"
+            class="site-logo"
+            aria-label="Lasered Treasure Home"
+        >
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lasered Treasure"
+            >
+
+        </a>
+
+
+
+        <!-- Desktop Navigation -->
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="what-we-engrave.html">
+                What We Engrave
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="custom-orders.html">
+                Custom Orders
+            </a>
+
+            <a
+                href="about.html"
+                class="active"
+            >
+                About
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <!-- Quote Button -->
+
+        <a
+            href="quote.html"
+            class="header-quote-button"
+        >
+            Request a Quote
+        </a>
+
+
+
+        <!-- Mobile Menu -->
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNavigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- Mobile Navigation -->
+
+    <nav
+        class="mobile-navigation"
+        id="mobileNavigation"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="what-we-engrave.html">
+            What We Engrave
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="custom-orders.html">
+            Custom Orders
+        </a>
+
+        <a
+            href="about.html"
+            class="active"
+        >
+            About
+        </a>
+
+        <a href="faq.html">
+            FAQ
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="quote.html"
+            class="mobile-quote-button"
+        >
+            Request a Quote
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         PAGE HERO
+    ================================================= -->
+
+    <section class="page-hero">
+
+        <div class="content-container">
+
+            <div class="page-hero-content">
+
+                <p class="section-eyebrow light">
+                    Our Story
+                </p>
+
+                <h1>
+                    About Lasered Treasure
+                </h1>
+
+                <p>
+                    Custom engraving is about more than putting
+                    a name on an object. It is about creating
+                    something personal that was made for a
+                    specific person, event or moment.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ABOUT STORY
+    ================================================= -->
+
+    <section class="about-story">
+
+        <div class="content-container">
+
+            <div class="about-story-grid">
+
+
+                <!-- Owner Image -->
+
+                <div class="about-story-image">
+
+                    <img
+                        src="assets/images/about-owner.jpg"
+                        alt="Carol Davis of Lasered Treasure"
+                    >
+
+                    <div
+                        class="about-image-accent"
+                        aria-hidden="true"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- Story -->
+
+                <div class="about-story-copy">
+
+                    <p class="section-eyebrow">
+                        Portsmouth, Virginia
+                    </p>
+
+                    <h2>
+                        Creating Something Worth Keeping
+                    </h2>
+
+                    <p>
+                        Lasered Treasure is a woman-owned
+                        engraving business located in Portsmouth,
+                        Virginia and led by Carol Davis.
+                    </p>
+
+                    <p>
+                        We create custom engraved pieces for
+                        customers looking for something personal,
+                        useful or meaningful. Projects range from
+                        gifts and keepsakes to awards, plaques,
+                        signs and items customers bring to us
+                        with their own ideas.
+                    </p>
+
+                    <p>
+                        Because custom projects do not always fit
+                        neatly into a catalog, we encourage
+                        customers to reach out with photos,
+                        artwork or even a rough idea. We can
+                        review the project and help determine
+                        what may be possible.
+                    </p>
+
+                    <div class="about-owner-name">
+
+                        <strong>
+                            Carol Davis
+                        </strong>
+
+                        <span>
+                            Lasered Treasure
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         VALUES
+    ================================================= -->
+
+    <section class="about-values">
+
+        <div class="content-container">
+
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow">
+                    How We Work
+                </p>
+
+                <h2>
+                    The Details Matter
+                </h2>
+
+                <p>
+                    Every custom project has its own purpose,
+                    material, design and story. We treat each
+                    one accordingly.
+                </p>
+
+            </div>
+
+
+
+            <div class="values-grid">
+
+
+                <!-- Value 1 -->
+
+                <div class="value-card">
+
+                    <div class="value-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Personal
+                    </h3>
+
+                    <p>
+                        Your project should feel like yours.
+                        Names, dates, artwork and details help
+                        turn an ordinary item into something
+                        created for a specific person.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Value 2 -->
+
+                <div class="value-card">
+
+                    <div class="value-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Custom
+                    </h3>
+
+                    <p>
+                        Not every project comes from a catalog.
+                        We welcome ideas, inspiration photos,
+                        unusual items and requests that need a
+                        little discussion first.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Value 3 -->
+
+                <div class="value-card">
+
+                    <div class="value-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Clear
+                    </h3>
+
+                    <p>
+                        We want to understand what you are asking
+                        for before work starts. That means
+                        reviewing the material, artwork, wording,
+                        quantity and timing.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Value 4 -->
+
+                <div class="value-card">
+
+                    <div class="value-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Local
+                    </h3>
+
+                    <p>
+                        We are based in Portsmouth and serve
+                        customers throughout Hampton Roads while
+                        also working with customers on projects
+                        from beyond the local area.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LOCAL BUSINESS
+    ================================================= -->
+
+    <section class="local-section">
+
+        <div class="content-container">
+
+            <div class="local-grid">
+
+
+                <!-- Copy -->
+
+                <div class="local-copy">
+
+                    <p class="section-eyebrow light">
+                        Local Business
+                    </p>
+
+                    <h2>
+                        Proudly Based in Portsmouth
+                    </h2>
+
+                    <p>
+                        Lasered Treasure is based in Portsmouth,
+                        Virginia, in the heart of Hampton Roads.
+                        We work with individuals, families,
+                        organizations and businesses looking for
+                        personalized engraving and custom pieces.
+                    </p>
+
+                    <p>
+                        If you are nearby, contact us before
+                        visiting so we can discuss your project
+                        and make arrangements.
+                    </p>
+
+
+                    <div class="local-details">
+
+
+                        <div class="local-detail">
+
+                            <strong>
+                                Based In
+                            </strong>
+
+                            <span>
+                                Portsmouth, Virginia
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="local-detail">
+
+                            <strong>
+                                Service Area
+                            </strong>
+
+                            <span>
+                                Hampton Roads &amp; Beyond
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="local-detail">
+
+                            <strong>
+                                Business
+                            </strong>
+
+                            <span>
+                                Woman-Owned
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="local-detail">
+
+                            <strong>
+                                Specialty
+                            </strong>
+
+                            <span>
+                                Custom Laser Engraving
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Image -->
+
+                <div class="local-image">
+
+                    <img
+                        src="assets/images/contact-feature.jpg"
+                        alt="Custom engraved products from Lasered Treasure"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         THE CUSTOM DIFFERENCE
+    ================================================= -->
+
+    <section class="custom-difference">
+
+        <div class="content-container">
+
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow">
+                    Why Custom?
+                </p>
+
+                <h2>
+                    More Than Something Off a Shelf
+                </h2>
+
+            </div>
+
+
+
+            <div class="difference-grid">
+
+
+                <div class="difference-card">
+
+                    <h3>
+                        Gifts With Meaning
+                    </h3>
+
+                    <p>
+                        Add a name, date, message, artwork or
+                        other detail that connects the item to
+                        the person receiving it.
+                    </p>
+
+                </div>
+
+
+
+                <div class="difference-card">
+
+                    <h3>
+                        Recognition That Lasts
+                    </h3>
+
+                    <p>
+                        Awards and recognition pieces become
+                        reminders of the accomplishment, service
+                        or milestone behind them.
+                    </p>
+
+                </div>
+
+
+
+                <div class="difference-card">
+
+                    <h3>
+                        Your Own Idea
+                    </h3>
+
+                    <p>
+                        Sometimes you know exactly what you want
+                        but cannot find it anywhere. That is when
+                        a custom project makes sense.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OWNER QUOTE
+    ================================================= -->
+
+    <section class="owner-quote">
+
+        <div class="content-container">
+
+            <div class="owner-quote-box">
+
+                <div
+                    class="quote-mark"
+                    aria-hidden="true"
+                >
+                    “
+                </div>
+
+                <!--
+                    IMPORTANT:
+                    Replace this quote with a real quote from
+                    Carol before the website goes live.
+                -->
+
+                <blockquote>
+                    Have an idea for something you would like
+                    engraved? Send it to us. Some of our best
+                    projects start with a customer simply asking,
+                    “Can you make this?”
+                </blockquote>
+
+                <cite>
+                    Lasered Treasure
+                </cite>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FINAL CTA
+    ================================================= -->
+
+    <section class="final-cta">
+
+        <div class="content-container">
+
+            <div class="final-cta-content">
+
+                <p class="section-eyebrow light">
+                    Have an Idea?
+                </p>
+
+                <h2>
+                    Let's See What We Can Create
+                </h2>
+
+                <p>
+                    Send us your idea, photos or artwork and
+                    tell us what you have in mind.
+                </p>
+
+                <a
+                    href="quote.html"
+                    class="button button-gold"
+                >
+                    Request a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="content-container">
+
+        <div class="footer-grid">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="assets/images/logo-white.png"
+                        alt="Lasered Treasure"
+                    >
+
+                </a>
+
+                <p>
+                    Custom laser engraving, personalized gifts,
+                    awards and custom projects in Portsmouth,
+                    Virginia.
+                </p>
+
+            </div>
+
+
+
+            <!-- Explore -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="what-we-engrave.html">
+                    What We Engrave
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="custom-orders.html">
+                    Custom Orders
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+            </div>
+
+
+
+            <!-- Help -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Help
+                </h3>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+                <a href="quote.html">
+                    Request a Quote
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Portsmouth, Virginia
+                </p>
+
+                <p>
+                    Serving Hampton Roads and beyond.
+                </p>
+
+                <a href="tel:+17573736646">
+                    (757) 373-6646
+                </a>
+
+                <!--
+                    Verify preferred email before launch.
+                -->
+
+                <a href="mailto:laseredtreasure@gmail.com">
+                    laseredtreasure@gmail.com
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy;
+                <span id="currentYear"></span>
+                Lasered Treasure. All rights reserved.
+            </p>
+
+            <p>
+                Custom laser engraving in Portsmouth, Virginia.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
