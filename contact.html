@@ -1,1 +1,1706 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contact Us | Lasered Treasure</title>
+
+    <meta
+        name="description"
+        content="Contact Lasered Treasure in Portsmouth, Virginia about custom laser engraving, personalized gifts, awards, plaques and custom projects."
+    >
+
+    <meta
+        name="keywords"
+        content="contact Lasered Treasure, laser engraving Portsmouth VA, custom engraving Hampton Roads, engraving Portsmouth Virginia"
+    >
+
+    <meta
+        name="author"
+        content="Lasered Treasure"
+    >
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Contact Lasered Treasure"
+    >
+
+    <meta
+        property="og:description"
+        content="Contact Lasered Treasure in Portsmouth, Virginia about your custom engraving project."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://laseredtreasure.com/contact.html"
+    >
+
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/styles.css"
+    >
+
+
+    <!-- Contact Page Styles -->
+
+    <style>
+
+        /* =============================================
+           CONTACT INTRO
+        ============================================= */
+
+        .contact-intro {
+            padding:
+                85px 0 45px;
+
+            background: var(--cream);
+        }
+
+
+        .contact-intro .section-heading {
+            margin-bottom: 0;
+        }
+
+
+
+        /* =============================================
+           CONTACT OPTIONS
+        ============================================= */
+
+        .contact-options {
+            padding:
+                30px 0 90px;
+
+            background: var(--cream);
+        }
+
+
+        .contact-card-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
+        }
+
+
+        .contact-card {
+            min-height: 260px;
+
+            padding: 34px 30px;
+
+            background: var(--white);
+
+            border:
+                1px solid var(--border-light);
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .contact-card:hover {
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(198, 146, 60, 0.6);
+
+            box-shadow:
+                var(--shadow-soft);
+        }
+
+
+        .contact-icon {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 52px;
+            height: 52px;
+
+            margin-bottom: 22px;
+
+            color: var(--black);
+
+            background: var(--gold);
+
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+
+        .contact-card h2 {
+            margin-bottom: 11px;
+
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+
+        .contact-card p {
+            color: var(--text-medium);
+
+            font-size: 0.9rem;
+        }
+
+
+        .contact-card a {
+            color: var(--gold-dark);
+
+            font-weight: 800;
+        }
+
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* =============================================
+           MAIN CONTACT SECTION
+        ============================================= */
+
+        .contact-main {
+            padding:
+                100px 0;
+
+            background: var(--white);
+        }
+
+
+        .contact-main-grid {
+            display: grid;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
+            gap: 75px;
+
+            align-items: start;
+        }
+
+
+
+        /* =============================================
+           CONTACT INFORMATION
+        ============================================= */
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+
+            font-size:
+                clamp(2.2rem, 4vw, 3.5rem);
+
+            font-weight: 800;
+
+            letter-spacing:
+                -0.045em;
+        }
+
+
+        .contact-info > p {
+            color: var(--text-medium);
+
+            line-height: 1.8;
+        }
+
+
+        .contact-detail-list {
+            display: flex;
+
+            flex-direction: column;
+
+            margin-top: 34px;
+        }
+
+
+        .contact-detail-item {
+            display: grid;
+
+            grid-template-columns:
+                120px 1fr;
+
+            gap: 20px;
+
+            padding:
+                20px 0;
+
+            border-bottom:
+                1px solid var(--border-light);
+        }
+
+
+        .contact-detail-item:first-child {
+            border-top:
+                1px solid var(--border-light);
+        }
+
+
+        .contact-detail-label {
+            color: var(--gold-dark);
+
+            font-size: 0.7rem;
+            font-weight: 800;
+
+            letter-spacing: 0.07em;
+
+            text-transform: uppercase;
+        }
+
+
+        .contact-detail-value {
+            color: var(--text-dark);
+
+            font-size: 0.92rem;
+        }
+
+
+        .contact-detail-value a {
+            font-weight: 700;
+        }
+
+
+        .contact-detail-value a:hover {
+            color: var(--gold-dark);
+        }
+
+
+
+        /* =============================================
+           APPOINTMENT NOTE
+        ============================================= */
+
+        .appointment-note {
+            margin-top: 32px;
+
+            padding: 27px;
+
+            background: var(--cream);
+
+            border-left:
+                4px solid var(--gold);
+        }
+
+
+        .appointment-note h3 {
+            margin-bottom: 9px;
+
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+
+        .appointment-note p {
+            margin-bottom: 0;
+
+            color: var(--text-medium);
+
+            font-size: 0.88rem;
+        }
+
+
+
+        /* =============================================
+           CONTACT FORM
+        ============================================= */
+
+        .contact-form-card {
+            padding: 42px;
+
+            background: var(--cream);
+
+            border:
+                1px solid var(--border-light);
+        }
+
+
+        .contact-form-card h2 {
+            margin-bottom: 8px;
+
+            font-size: 1.7rem;
+            font-weight: 800;
+        }
+
+
+        .contact-form-intro {
+            margin-bottom: 28px;
+
+            color: var(--text-medium);
+
+            font-size: 0.9rem;
+        }
+
+
+        .contact-form-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+
+        .contact-form-group {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+
+        .contact-form-group.full-width {
+            grid-column:
+                1 / -1;
+        }
+
+
+        .contact-form-group label {
+            font-size: 0.73rem;
+            font-weight: 800;
+
+            letter-spacing: 0.04em;
+
+            text-transform: uppercase;
+        }
+
+
+        .contact-form-group input,
+        .contact-form-group select,
+        .contact-form-group textarea {
+            width: 100%;
+
+            padding:
+                13px 14px;
+
+            color: var(--text-dark);
+
+            background: var(--white);
+
+            border:
+                1px solid #cabfae;
+
+            outline: none;
+
+            border-radius: 0;
+
+            transition:
+                border-color var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .contact-form-group textarea {
+            min-height: 170px;
+
+            resize: vertical;
+        }
+
+
+        .contact-form-group input:focus,
+        .contact-form-group select:focus,
+        .contact-form-group textarea:focus {
+            border-color: var(--gold);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(198, 146, 60, 0.13);
+        }
+
+
+        .contact-submit {
+            margin-top: 24px;
+        }
+
+
+        .contact-submit .button {
+            border: 0;
+        }
+
+
+
+        /* =============================================
+           QUOTE VS QUESTION
+        ============================================= */
+
+        .quote-question-section {
+            padding:
+                95px 0;
+
+            color: var(--white);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b0b0a,
+                    #191713
+                );
+        }
+
+
+        .quote-question-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 24px;
+        }
+
+
+        .quote-question-card {
+            padding:
+                42px 36px;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.12);
+
+            background:
+                rgba(255, 255, 255, 0.035);
+        }
+
+
+        .quote-question-card h2 {
+            margin-bottom: 13px;
+
+            font-size: 1.55rem;
+            font-weight: 800;
+        }
+
+
+        .quote-question-card p {
+            color: #bbb5ac;
+
+            font-size: 0.9rem;
+        }
+
+
+        .quote-question-card .button {
+            margin-top: 10px;
+        }
+
+
+
+        /* =============================================
+           SERVICE AREA
+        ============================================= */
+
+        .service-area {
+            padding:
+                90px 0;
+
+            background: var(--cream);
+        }
+
+
+        .service-area-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+
+        .service-area-copy h2 {
+            margin-bottom: 20px;
+
+            font-size:
+                clamp(2rem, 4vw, 3.2rem);
+
+            font-weight: 800;
+
+            letter-spacing: -0.04em;
+        }
+
+
+        .service-area-copy p {
+            color: var(--text-medium);
+        }
+
+
+        .service-area-image {
+            min-height: 400px;
+
+            overflow: hidden;
+        }
+
+
+        .service-area-image img {
+            width: 100%;
+            height: 100%;
+
+            min-height: 400px;
+
+            object-fit: cover;
+        }
+
+
+
+        /* =============================================
+           SPAM FIELD
+        ============================================= */
+
+        .website-field {
+            position: absolute;
+
+            left: -9999px;
+
+            width: 1px;
+            height: 1px;
+
+            overflow: hidden;
+        }
+
+
+
+        /* =============================================
+           RESPONSIVE
+        ============================================= */
+
+        @media (max-width: 940px) {
+
+            .contact-card-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-main-grid,
+            .service-area-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .quote-question-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .contact-intro {
+                padding:
+                    65px 0 30px;
+            }
+
+
+            .contact-options {
+                padding:
+                    20px 0 70px;
+            }
+
+
+            .contact-main,
+            .quote-question-section,
+            .service-area {
+                padding:
+                    70px 0;
+            }
+
+
+            .contact-form-card {
+                padding:
+                    28px 20px;
+            }
+
+
+            .contact-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-form-group.full-width {
+                grid-column: auto;
+            }
+
+
+            .contact-detail-item {
+                grid-template-columns: 1fr;
+
+                gap: 5px;
+            }
+
+
+            .service-area-image,
+            .service-area-image img {
+                min-height: 310px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <a
+            href="index.html"
+            class="site-logo"
+            aria-label="Lasered Treasure Home"
+        >
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lasered Treasure"
+            >
+
+        </a>
+
+
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="what-we-engrave.html">
+                What We Engrave
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="custom-orders.html">
+                Custom Orders
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a
+                href="contact.html"
+                class="active"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <a
+            href="quote.html"
+            class="header-quote-button"
+        >
+            Request a Quote
+        </a>
+
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNavigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <nav
+        class="mobile-navigation"
+        id="mobileNavigation"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="what-we-engrave.html">
+            What We Engrave
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="custom-orders.html">
+            Custom Orders
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="faq.html">
+            FAQ
+        </a>
+
+        <a
+            href="contact.html"
+            class="active"
+        >
+            Contact
+        </a>
+
+        <a
+            href="quote.html"
+            class="mobile-quote-button"
+        >
+            Request a Quote
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         PAGE HERO
+    ================================================= -->
+
+    <section class="page-hero">
+
+        <div class="content-container">
+
+            <div class="page-hero-content">
+
+                <p class="section-eyebrow light">
+                    Get in Touch
+                </p>
+
+                <h1>
+                    Contact Us
+                </h1>
+
+                <p>
+                    Have a question about engraving,
+                    materials or a project you have in mind?
+                    Get in touch with Lasered Treasure.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================= -->
+
+    <section class="contact-intro">
+
+        <div class="content-container">
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow">
+                    Portsmouth, Virginia
+                </p>
+
+                <h2>
+                    How Can We Help?
+                </h2>
+
+                <p>
+                    Whether you have a quick question or a
+                    complete custom project in mind, we would
+                    be happy to hear from you.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CONTACT OPTIONS
+    ================================================= -->
+
+    <section class="contact-options">
+
+        <div class="content-container">
+
+            <div class="contact-card-grid">
+
+
+                <!-- Phone -->
+
+                <div class="contact-card">
+
+                    <div
+                        class="contact-icon"
+                        aria-hidden="true"
+                    >
+                        ☎
+                    </div>
+
+                    <h2>
+                        Call
+                    </h2>
+
+                    <p>
+                        Have a quick question or want to
+                        discuss a project?
+                    </p>
+
+                    <a href="tel:+17573736646">
+                        (757) 373-6646
+                    </a>
+
+                </div>
+
+
+
+                <!-- Quote -->
+
+                <div class="contact-card">
+
+                    <div
+                        class="contact-icon"
+                        aria-hidden="true"
+                    >
+                        +
+                    </div>
+
+                    <h2>
+                        Request a Quote
+                    </h2>
+
+                    <p>
+                        Have a specific project in mind?
+                        Send the details, photos and artwork
+                        through our quote form.
+                    </p>
+
+                    <a href="quote.html">
+                        Start a Quote Request
+                    </a>
+
+                </div>
+
+
+
+                <!-- Location -->
+
+                <div class="contact-card">
+
+                    <div
+                        class="contact-icon"
+                        aria-hidden="true"
+                    >
+                        ●
+                    </div>
+
+                    <h2>
+                        Location
+                    </h2>
+
+                    <p>
+                        Lasered Treasure is based in
+                        Portsmouth, Virginia.
+                    </p>
+
+                    <a href="#location">
+                        Location Information
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CONTACT FORM AND INFO
+    ================================================= -->
+
+    <section class="contact-main">
+
+        <div class="content-container">
+
+            <div class="contact-main-grid">
+
+
+                <!-- =====================================
+                     CONTACT INFO
+                ====================================== -->
+
+                <div class="contact-info">
+
+                    <p class="section-eyebrow">
+                        Contact Lasered Treasure
+                    </p>
+
+                    <h2>
+                        Have a Question?
+                    </h2>
+
+                    <p>
+                        If you do not need a full quote yet,
+                        use the contact form to send a general
+                        question.
+                    </p>
+
+                    <p>
+                        If your question involves a specific
+                        item, project, quantity or deadline,
+                        the quote form will give us more of
+                        the information we need.
+                    </p>
+
+
+
+                    <div class="contact-detail-list">
+
+
+                        <!-- Phone -->
+
+                        <div class="contact-detail-item">
+
+                            <div class="contact-detail-label">
+                                Phone
+                            </div>
+
+                            <div class="contact-detail-value">
+
+                                <a href="tel:+17573736646">
+                                    (757) 373-6646
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Location -->
+
+                        <div class="contact-detail-item">
+
+                            <div class="contact-detail-label">
+                                Location
+                            </div>
+
+                            <div class="contact-detail-value">
+                                Portsmouth, Virginia
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Service Area -->
+
+                        <div class="contact-detail-item">
+
+                            <div class="contact-detail-label">
+                                Service Area
+                            </div>
+
+                            <div class="contact-detail-value">
+                                Hampton Roads and beyond
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Visits -->
+
+                        <div class="contact-detail-item">
+
+                            <div class="contact-detail-label">
+                                Visiting
+                            </div>
+
+                            <div class="contact-detail-value">
+                                Contact us before visiting.
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Appointment Note -->
+
+                    <div class="appointment-note">
+
+                        <h3>
+                            Contact Us Before Visiting
+                        </h3>
+
+                        <p>
+                            Please contact Lasered Treasure
+                            before arriving with an item or
+                            project. This gives us a chance to
+                            review what you need and make the
+                            appropriate arrangements.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     GENERAL CONTACT FORM
+                ====================================== -->
+
+                <div class="contact-form-card">
+
+                    <p class="section-eyebrow">
+                        Send a Message
+                    </p>
+
+                    <h2>
+                        General Question
+                    </h2>
+
+                    <p class="contact-form-intro">
+                        Use this form for general questions.
+                        For project pricing, use the Request a
+                        Quote form instead.
+                    </p>
+
+
+
+                    <!--
+                        Replace YOUR_FORM_ID with the actual
+                        Formspree form ID later.
+                    -->
+
+                    <form
+                        action="https://formspree.io/f/YOUR_FORM_ID"
+                        method="POST"
+                    >
+
+
+                        <!-- Spam Honeypot -->
+
+                        <div
+                            class="website-field"
+                            aria-hidden="true"
+                        >
+
+                            <label for="contactWebsite">
+                                Leave this field empty
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactWebsite"
+                                name="_gotcha"
+                                tabindex="-1"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+
+                        <div class="contact-form-grid">
+
+
+                            <!-- Name -->
+
+                            <div class="contact-form-group">
+
+                                <label for="contactName">
+                                    Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    name="Name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- Phone -->
+
+                            <div class="contact-form-group">
+
+                                <label for="contactPhone">
+                                    Phone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="contactPhone"
+                                    name="Phone"
+                                    autocomplete="tel"
+                                >
+
+                            </div>
+
+
+
+                            <!-- Email -->
+
+                            <div class="contact-form-group full-width">
+
+                                <label for="contactEmail">
+                                    Email *
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    name="Email"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- Subject -->
+
+                            <div class="contact-form-group full-width">
+
+                                <label for="contactSubject">
+                                    What Is Your Question About?
+                                </label>
+
+                                <select
+                                    id="contactSubject"
+                                    name="Subject"
+                                >
+
+                                    <option value="General Question">
+                                        General Question
+                                    </option>
+
+                                    <option value="Materials">
+                                        Materials
+                                    </option>
+
+                                    <option value="Existing Order">
+                                        Existing Order
+                                    </option>
+
+                                    <option value="Customer Supplied Item">
+                                        Customer Supplied Item
+                                    </option>
+
+                                    <option value="Bulk Order">
+                                        Bulk Order
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- Message -->
+
+                            <div class="contact-form-group full-width">
+
+                                <label for="contactMessage">
+                                    Message *
+                                </label>
+
+                                <textarea
+                                    id="contactMessage"
+                                    name="Message"
+                                    placeholder="How can we help?"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="contact-submit">
+
+                            <button
+                                type="submit"
+                                class="button button-dark"
+                            >
+                                Send Message
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         QUESTION OR QUOTE
+    ================================================= -->
+
+    <section class="quote-question-section">
+
+        <div class="content-container">
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow light">
+                    Which Form Should You Use?
+                </p>
+
+                <h2>
+                    Question or Project?
+                </h2>
+
+            </div>
+
+
+
+            <div class="quote-question-grid">
+
+
+                <!-- General Question -->
+
+                <div class="quote-question-card">
+
+                    <p class="section-eyebrow light">
+                        General Question
+                    </p>
+
+                    <h2>
+                        Just Need an Answer?
+                    </h2>
+
+                    <p>
+                        Use the contact form if you have a
+                        general question about Lasered Treasure,
+                        materials or an existing conversation.
+                    </p>
+
+                    <a
+                        href="#contact"
+                        class="button button-outline-light"
+                    >
+                        Contact Us
+                    </a>
+
+                </div>
+
+
+
+                <!-- Project Quote -->
+
+                <div class="quote-question-card">
+
+                    <p class="section-eyebrow light">
+                        Custom Project
+                    </p>
+
+                    <h2>
+                        Want Something Made?
+                    </h2>
+
+                    <p>
+                        Use the quote form if you want pricing
+                        for a specific project or need to send
+                        photos, artwork, quantities or a
+                        deadline.
+                    </p>
+
+                    <a
+                        href="quote.html"
+                        class="button button-gold"
+                    >
+                        Request a Quote
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LOCATION
+    ================================================= -->
+
+    <section
+        class="service-area"
+        id="location"
+    >
+
+        <div class="content-container">
+
+            <div class="service-area-grid">
+
+
+                <div class="service-area-copy">
+
+                    <p class="section-eyebrow">
+                        Our Location
+                    </p>
+
+                    <h2>
+                        Based in Portsmouth, Virginia
+                    </h2>
+
+                    <p>
+                        Lasered Treasure is located in
+                        Portsmouth and works with customers
+                        throughout Hampton Roads and beyond.
+                    </p>
+
+                    <p>
+                        To protect the privacy of a small
+                        home-based business, we recommend
+                        contacting Lasered Treasure before
+                        visiting or dropping off an item.
+                    </p>
+
+                    <a
+                        href="tel:+17573736646"
+                        class="button button-dark"
+                    >
+                        Call Lasered Treasure
+                    </a>
+
+                </div>
+
+
+
+                <div class="service-area-image">
+
+                    <img
+                        src="assets/images/contact-feature.jpg"
+                        alt="Custom products created by Lasered Treasure"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FINAL CTA
+    ================================================= -->
+
+    <section class="final-cta">
+
+        <div class="content-container">
+
+            <div class="final-cta-content">
+
+                <p class="section-eyebrow light">
+                    Ready to Get Started?
+                </p>
+
+                <h2>
+                    Tell Us About Your Project
+                </h2>
+
+                <p>
+                    Send us your project details, photos
+                    and artwork so we can review what you
+                    want to create.
+                </p>
+
+                <a
+                    href="quote.html"
+                    class="button button-gold"
+                >
+                    Request a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="content-container">
+
+        <div class="footer-grid">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="assets/images/logo-white.png"
+                        alt="Lasered Treasure"
+                    >
+
+                </a>
+
+                <p>
+                    Custom laser engraving, personalized gifts,
+                    awards and custom projects in Portsmouth,
+                    Virginia.
+                </p>
+
+            </div>
+
+
+
+            <!-- Explore -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="what-we-engrave.html">
+                    What We Engrave
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="custom-orders.html">
+                    Custom Orders
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+            </div>
+
+
+
+            <!-- Help -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Help
+                </h3>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+                <a href="quote.html">
+                    Request a Quote
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Portsmouth, Virginia
+                </p>
+
+                <p>
+                    Serving Hampton Roads and beyond.
+                </p>
+
+                <a href="tel:+17573736646">
+                    (757) 373-6646
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy;
+                <span id="currentYear"></span>
+                Lasered Treasure. All rights reserved.
+            </p>
+
+            <p>
+                Custom laser engraving in Portsmouth, Virginia.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
