@@ -1,1 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Page Not Found | Lasered Treasure</title>
+
+    <meta
+        name="description"
+        content="The page you were looking for could not be found. Return to Lasered Treasure for custom laser engraving in Portsmouth, Virginia."
+    >
+
+    <meta
+        name="robots"
+        content="noindex, follow"
+    >
+
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/styles.css"
+    >
+
+
+    <!-- 404 Page Styles -->
+
+    <style>
+
+        /* =============================================
+           404 MAIN SECTION
+        ============================================= */
+
+        .error-page {
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            min-height:
+                calc(100vh - 84px);
+
+            padding:
+                80px 0;
+
+            color: var(--white);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.92) 0%,
+                    rgba(0, 0, 0, 0.82) 48%,
+                    rgba(0, 0, 0, 0.50) 100%
+                ),
+                url("assets/images/hero-home.jpg")
+                center / cover
+                no-repeat;
+        }
+
+
+        .error-content {
+            max-width: 720px;
+        }
+
+
+        .error-number {
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: var(--gold);
+
+            font-family: var(--font-display);
+
+            font-size:
+                clamp(5rem, 14vw, 9rem);
+
+            font-weight: 700;
+
+            line-height: 0.9;
+        }
+
+
+        .error-content h1 {
+            margin-bottom: 20px;
+
+            font-size:
+                clamp(2.4rem, 5vw, 4.4rem);
+
+            font-weight: 800;
+
+            letter-spacing:
+                -0.05em;
+
+            text-transform: uppercase;
+        }
+
+
+        .error-content > p {
+            max-width: 600px;
+
+            margin-bottom: 30px;
+
+            color: #ddd8cf;
+
+            font-size: 1rem;
+
+            line-height: 1.75;
+        }
+
+
+
+        /* =============================================
+           BUTTONS
+        ============================================= */
+
+        .error-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+        }
+
+
+
+        /* =============================================
+           QUICK LINKS
+        ============================================= */
+
+        .error-links {
+            margin-top: 45px;
+            padding-top: 28px;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.15);
+        }
+
+
+        .error-links-title {
+            margin-bottom: 14px;
+
+            color: var(--gold-light);
+
+            font-size: 0.7rem;
+            font-weight: 800;
+
+            letter-spacing: 0.08em;
+
+            text-transform: uppercase;
+        }
+
+
+        .error-link-list {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap:
+                10px 22px;
+        }
+
+
+        .error-link-list a {
+            color: #d4cfc6;
+
+            font-size: 0.83rem;
+            font-weight: 700;
+
+            transition:
+                color var(--transition);
+        }
+
+
+        .error-link-list a:hover {
+            color: var(--gold-light);
+        }
+
+
+
+        /* =============================================
+           RESPONSIVE
+        ============================================= */
+
+        @media (max-width: 940px) {
+
+            .error-page {
+                min-height:
+                    calc(100vh - 76px);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .error-page {
+                min-height:
+                    calc(100vh - 76px);
+
+                padding:
+                    65px 0;
+
+                background-position:
+                    62% center;
+            }
+
+
+            .error-buttons {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+
+            .error-buttons .button {
+                width: 100%;
+
+                max-width: 280px;
+            }
+
+
+            .error-link-list {
+                flex-direction: column;
+
+                gap: 11px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <!-- Logo -->
+
+        <a
+            href="index.html"
+            class="site-logo"
+            aria-label="Lasered Treasure Home"
+        >
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lasered Treasure"
+            >
+
+        </a>
+
+
+
+        <!-- Desktop Navigation -->
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="what-we-engrave.html">
+                What We Engrave
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="custom-orders.html">
+                Custom Orders
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <!-- Quote Button -->
+
+        <a
+            href="quote.html"
+            class="header-quote-button"
+        >
+            Request a Quote
+        </a>
+
+
+
+        <!-- Mobile Menu -->
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNavigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- Mobile Navigation -->
+
+    <nav
+        class="mobile-navigation"
+        id="mobileNavigation"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="what-we-engrave.html">
+            What We Engrave
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="custom-orders.html">
+            Custom Orders
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="faq.html">
+            FAQ
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="quote.html"
+            class="mobile-quote-button"
+        >
+            Request a Quote
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     404 CONTENT
+===================================================== -->
+
+<main>
+
+    <section class="error-page">
+
+        <div class="content-container">
+
+            <div class="error-content">
+
+
+                <span class="error-number">
+                    404
+                </span>
+
+
+                <p class="section-eyebrow light">
+                    Page Not Found
+                </p>
+
+
+                <h1>
+                    Looks Like This One Missed the Mark.
+                </h1>
+
+
+                <p>
+                    The page you were looking for may have
+                    moved, been renamed or no longer exists.
+                    You can head back to the homepage or browse
+                    our custom engraving work.
+                </p>
+
+
+
+                <!-- Buttons -->
+
+                <div class="error-buttons">
+
+                    <a
+                        href="index.html"
+                        class="button button-gold"
+                    >
+                        Back to Home
+                    </a>
+
+                    <a
+                        href="gallery.html"
+                        class="button button-outline-light"
+                    >
+                        View Gallery
+                    </a>
+
+                </div>
+
+
+
+                <!-- Quick Links -->
+
+                <div class="error-links">
+
+                    <p class="error-links-title">
+                        Looking for something?
+                    </p>
+
+
+                    <div class="error-link-list">
+
+                        <a href="what-we-engrave.html">
+                            What We Engrave
+                        </a>
+
+                        <a href="custom-orders.html">
+                            Custom Orders
+                        </a>
+
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+
+                        <a href="quote.html">
+                            Request a Quote
+                        </a>
+
+                        <a href="contact.html">
+                            Contact Us
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
