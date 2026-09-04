@@ -1,1 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom Orders | Lasered Treasure</title>
+
+    <meta
+        name="description"
+        content="Learn how custom laser engraving orders work at Lasered Treasure in Portsmouth, Virginia. Send your idea, photos or artwork, receive a quote and let us create your personalized project."
+    >
+
+    <meta
+        name="keywords"
+        content="custom laser engraving Portsmouth VA, personalized engraving Hampton Roads, custom gifts Portsmouth, custom plaques, engraving quote"
+    >
+
+    <meta name="author" content="Lasered Treasure">
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Custom Orders | Lasered Treasure"
+    >
+
+    <meta
+        property="og:description"
+        content="See how easy it is to start a custom laser engraving project with Lasered Treasure."
+    >
+
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:url"
+        content="https://laseredtreasure.com/custom-orders.html"
+    >
+
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/styles.css"
+    >
+
+
+    <!-- Page Specific Styles -->
+
+    <style>
+
+        /* =============================================
+           INTRO
+        ============================================= */
+
+        .custom-intro {
+            padding: 88px 0;
+            background: var(--cream);
+        }
+
+
+        .custom-intro-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 75px;
+        }
+
+
+        .custom-intro-image {
+            overflow: hidden;
+
+            min-height: 500px;
+
+            box-shadow:
+                0 14px 35px rgba(0, 0, 0, 0.12);
+        }
+
+
+        .custom-intro-image img {
+            width: 100%;
+            height: 100%;
+
+            min-height: 500px;
+
+            object-fit: cover;
+        }
+
+
+        .custom-intro-copy h2 {
+            margin-bottom: 22px;
+
+            font-size: clamp(2.2rem, 4vw, 3.7rem);
+            font-weight: 800;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .custom-intro-copy p {
+            color: var(--text-medium);
+        }
+
+
+        .custom-intro-copy .button {
+            margin-top: 12px;
+        }
+
+
+
+        /* =============================================
+           PROCESS SECTION
+        ============================================= */
+
+        .order-process {
+            padding: 100px 0;
+
+            background: var(--white);
+        }
+
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 24px;
+        }
+
+
+        .process-card {
+            position: relative;
+
+            min-height: 290px;
+
+            padding: 34px 30px;
+
+            background: var(--cream);
+
+            border:
+                1px solid rgba(110, 83, 48, 0.13);
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .process-card:hover {
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(198, 146, 60, 0.5);
+
+            box-shadow: var(--shadow-soft);
+        }
+
+
+        .process-number {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 56px;
+            height: 56px;
+
+            margin-bottom: 25px;
+
+            color: var(--black);
+
+            background: var(--gold);
+
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+
+        .process-card h3 {
+            margin-bottom: 14px;
+
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+
+        .process-card p {
+            margin-bottom: 0;
+
+            color: var(--text-medium);
+        }
+
+
+
+        /* =============================================
+           WHAT TO SEND
+        ============================================= */
+
+        .what-to-send {
+            padding: 95px 0;
+
+            color: var(--white);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c0c0b,
+                    #191714
+                );
+        }
+
+
+        .send-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: start;
+
+            gap: 80px;
+        }
+
+
+        .send-copy h2 {
+            margin-bottom: 20px;
+
+            font-size: clamp(2.2rem, 4vw, 3.6rem);
+            font-weight: 800;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .send-copy p {
+            color: #cbc6bd;
+        }
+
+
+        .send-list {
+            display: grid;
+
+            gap: 15px;
+
+            margin-top: 28px;
+        }
+
+
+        .send-list-item {
+            display: flex;
+
+            gap: 16px;
+
+            align-items: flex-start;
+        }
+
+
+        .send-check {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex: 0 0 28px;
+
+            width: 28px;
+            height: 28px;
+
+            color: var(--black);
+
+            background: var(--gold);
+
+            font-weight: 800;
+        }
+
+
+        .send-list-item strong {
+            display: block;
+
+            margin-bottom: 3px;
+
+            color: var(--white);
+        }
+
+
+        .send-list-item span {
+            color: #aaa49a;
+
+            font-size: 0.9rem;
+        }
+
+
+
+        /* =============================================
+           ARTWORK CARD
+        ============================================= */
+
+        .artwork-card {
+            padding: 38px;
+
+            background: var(--cream);
+
+            color: var(--text-dark);
+        }
+
+
+        .artwork-card h3 {
+            margin-bottom: 18px;
+
+            font-size: 1.45rem;
+            font-weight: 800;
+        }
+
+
+        .artwork-card p {
+            color: var(--text-medium);
+        }
+
+
+        .artwork-types {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+
+        .artwork-type {
+            padding: 14px;
+
+            background: var(--white);
+
+            border:
+                1px solid var(--border-light);
+
+            text-align: center;
+
+            font-size: 0.8rem;
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+
+        .artwork-note {
+            margin-top: 22px;
+            margin-bottom: 0;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid var(--border-light);
+
+            font-size: 0.88rem;
+        }
+
+
+
+        /* =============================================
+           CUSTOMER SUPPLIED ITEMS
+        ============================================= */
+
+        .customer-items {
+            padding: 100px 0;
+
+            background: var(--cream);
+        }
+
+
+        .customer-items-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .customer-items-content h2 {
+            margin-bottom: 22px;
+
+            font-size: clamp(2rem, 4vw, 3.3rem);
+            font-weight: 800;
+
+            letter-spacing: -0.04em;
+        }
+
+
+        .customer-items-content p {
+            color: var(--text-medium);
+        }
+
+
+        .customer-items-content ul {
+            margin: 25px 0 30px;
+
+            padding-left: 20px;
+        }
+
+
+        .customer-items-content li {
+            margin-bottom: 10px;
+        }
+
+
+        .customer-items-image {
+            min-height: 440px;
+
+            overflow: hidden;
+        }
+
+
+        .customer-items-image img {
+            width: 100%;
+            height: 100%;
+
+            min-height: 440px;
+
+            object-fit: cover;
+        }
+
+
+
+        /* =============================================
+           ORDER TIPS
+        ============================================= */
+
+        .order-tips {
+            padding: 92px 0;
+
+            background: var(--white);
+        }
+
+
+        .tips-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .tip-card {
+            padding: 30px 25px;
+
+            border:
+                1px solid var(--border-light);
+
+            background: var(--white);
+        }
+
+
+        .tip-card h3 {
+            margin-bottom: 12px;
+
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+
+        .tip-card p {
+            margin-bottom: 0;
+
+            color: var(--text-medium);
+
+            font-size: 0.9rem;
+        }
+
+
+
+        /* =============================================
+           RESPONSIVE
+        ============================================= */
+
+        @media (max-width: 940px) {
+
+            .custom-intro-grid,
+            .send-grid,
+            .customer-items-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .process-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .tips-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .custom-intro-image,
+            .custom-intro-image img {
+                min-height: 420px;
+            }
+
+
+            .customer-items-image,
+            .customer-items-image img {
+                min-height: 390px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .custom-intro,
+            .order-process,
+            .what-to-send,
+            .customer-items,
+            .order-tips {
+                padding:
+                    70px 0;
+            }
+
+
+            .process-grid,
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .process-card {
+                min-height: 0;
+            }
+
+
+            .artwork-card {
+                padding:
+                    28px 22px;
+            }
+
+
+            .artwork-types {
+                grid-template-columns: 1fr;
+            }
+
+
+            .custom-intro-image,
+            .custom-intro-image img {
+                min-height: 330px;
+            }
+
+
+            .customer-items-image,
+            .customer-items-image img {
+                min-height: 320px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <a
+            href="index.html"
+            class="site-logo"
+            aria-label="Lasered Treasure Home"
+        >
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lasered Treasure"
+            >
+
+        </a>
+
+
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="what-we-engrave.html">
+                What We Engrave
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a
+                href="custom-orders.html"
+                class="active"
+            >
+                Custom Orders
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <a
+            href="quote.html"
+            class="header-quote-button"
+        >
+            Request a Quote
+        </a>
+
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNavigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <nav
+        class="mobile-navigation"
+        id="mobileNavigation"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="what-we-engrave.html">
+            What We Engrave
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a
+            href="custom-orders.html"
+            class="active"
+        >
+            Custom Orders
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="faq.html">
+            FAQ
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="quote.html"
+            class="mobile-quote-button"
+        >
+            Request a Quote
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         PAGE HERO
+    ================================================= -->
+
+    <section class="page-hero">
+
+        <div class="content-container">
+
+            <div class="page-hero-content">
+
+                <p class="section-eyebrow light">
+                    Made for You
+                </p>
+
+                <h1>
+                    Custom Orders
+                </h1>
+
+                <p>
+                    Have an idea for something personal,
+                    meaningful or completely unique? Tell us
+                    what you have in mind and we will help
+                    determine the best way to create it.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================= -->
+
+    <section class="custom-intro">
+
+        <div class="content-container">
+
+            <div class="custom-intro-grid">
+
+
+                <div class="custom-intro-image">
+
+                    <img
+                        src="assets/images/custom-orders.jpg"
+                        alt="Custom laser engraving project being created"
+                    >
+
+                </div>
+
+
+
+                <div class="custom-intro-copy">
+
+                    <p class="section-eyebrow">
+                        Start With an Idea
+                    </p>
+
+                    <h2>
+                        You Don't Need to Have Everything Figured Out.
+                    </h2>
+
+                    <p>
+                        Some customers know exactly what they want.
+                        Others have a photo, a rough idea or an item
+                        they would like personalized.
+                    </p>
+
+                    <p>
+                        Either way, send us what you have. We can
+                        review the project, material, artwork,
+                        quantity and timing before providing a quote.
+                    </p>
+
+                    <p>
+                        The more information you send with your
+                        request, the easier it is for us to understand
+                        what you are trying to create.
+                    </p>
+
+                    <a
+                        href="quote.html"
+                        class="button button-dark"
+                    >
+                        Start Your Project
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SIX STEP PROCESS
+    ================================================= -->
+
+    <section class="order-process">
+
+        <div class="content-container">
+
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow">
+                    How It Works
+                </p>
+
+                <h2>
+                    From Idea to Finished Project
+                </h2>
+
+                <p>
+                    Custom engraving does not need to be
+                    complicated. Here is what to expect when
+                    starting a project with us.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-grid">
+
+
+                <!-- Step 1 -->
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        1
+                    </div>
+
+                    <h3>
+                        Tell Us Your Idea
+                    </h3>
+
+                    <p>
+                        Describe what you want made, personalized
+                        or engraved. Include the type of item,
+                        quantity and any important details.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Step 2 -->
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        2
+                    </div>
+
+                    <h3>
+                        Send Photos or Artwork
+                    </h3>
+
+                    <p>
+                        Upload a photo of the item, your logo,
+                        artwork, inspiration photo or anything
+                        else that helps explain the project.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Step 3 -->
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        3
+                    </div>
+
+                    <h3>
+                        We Review the Project
+                    </h3>
+
+                    <p>
+                        We will review the material, design,
+                        size, quantity and other details to
+                        determine what is possible.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Step 4 -->
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        4
+                    </div>
+
+                    <h3>
+                        Receive Your Quote
+                    </h3>
+
+                    <p>
+                        Once we understand the project, we will
+                        provide pricing and discuss any remaining
+                        details before work begins.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Step 5 -->
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        5
+                    </div>
+
+                    <h3>
+                        Approve the Details
+                    </h3>
+
+                    <p>
+                        Confirm the design, wording, quantity and
+                        project details before your item moves
+                        into production.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Step 6 -->
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        6
+                    </div>
+
+                    <h3>
+                        We Create It
+                    </h3>
+
+                    <p>
+                        Your project is engraved and prepared for
+                        pickup, delivery or shipping based on the
+                        arrangements made for your order.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         WHAT TO SEND
+    ================================================= -->
+
+    <section class="what-to-send">
+
+        <div class="content-container">
+
+            <div class="send-grid">
+
+
+                <div class="send-copy">
+
+                    <p class="section-eyebrow light">
+                        Help Us Understand Your Project
+                    </p>
+
+                    <h2>
+                        What Should You Send?
+                    </h2>
+
+                    <p>
+                        You do not need every one of these items,
+                        but including as much information as possible
+                        helps us review your project faster.
+                    </p>
+
+
+
+                    <div class="send-list">
+
+
+                        <div class="send-list-item">
+
+                            <div class="send-check">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    A Description
+                                </strong>
+
+                                <span>
+                                    Tell us what you want made and
+                                    how you want it personalized.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="send-list-item">
+
+                            <div class="send-check">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Photos
+                                </strong>
+
+                                <span>
+                                    Send clear pictures of the item
+                                    you want engraved.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="send-list-item">
+
+                            <div class="send-check">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Artwork or Logo
+                                </strong>
+
+                                <span>
+                                    Upload the best quality version
+                                    of your artwork that you have.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="send-list-item">
+
+                            <div class="send-check">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Quantity
+                                </strong>
+
+                                <span>
+                                    Tell us whether you need one
+                                    item or a larger order.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="send-list-item">
+
+                            <div class="send-check">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Needed By Date
+                                </strong>
+
+                                <span>
+                                    Let us know if your project is
+                                    for an event or has a deadline.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Artwork Box -->
+
+                <div class="artwork-card">
+
+                    <p class="section-eyebrow">
+                        Artwork
+                    </p>
+
+                    <h3>
+                        Have a Logo or Design?
+                    </h3>
+
+                    <p>
+                        Send the highest quality version available.
+                        Vector artwork is helpful when available,
+                        but do not worry if you only have a regular
+                        image file.
+                    </p>
+
+
+                    <div class="artwork-types">
+
+                        <div class="artwork-type">
+                            SVG
+                        </div>
+
+                        <div class="artwork-type">
+                            PDF
+                        </div>
+
+                        <div class="artwork-type">
+                            PNG
+                        </div>
+
+                        <div class="artwork-type">
+                            JPG
+                        </div>
+
+                    </div>
+
+
+                    <p class="artwork-note">
+                        If you are not sure what type of file you
+                        have, just send it. We can review it and
+                        let you know if another version is needed.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CUSTOMER SUPPLIED ITEMS
+    ================================================= -->
+
+    <section class="customer-items">
+
+        <div class="content-container">
+
+            <div class="customer-items-grid">
+
+
+                <div class="customer-items-content">
+
+                    <p class="section-eyebrow">
+                        Already Have the Item?
+                    </p>
+
+                    <h2>
+                        Customer Supplied Items
+                    </h2>
+
+                    <p>
+                        Have something you already own that you
+                        would like engraved? Send us photos before
+                        bringing it in.
+                    </p>
+
+                    <p>
+                        We need to review the item's material,
+                        shape, size and surface before determining
+                        whether it can be safely engraved.
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Take clear photos from multiple angles.
+                        </li>
+
+                        <li>
+                            Tell us what the item is made from, if known.
+                        </li>
+
+                        <li>
+                            Include approximate dimensions.
+                        </li>
+
+                        <li>
+                            Show us where you want the engraving placed.
+                        </li>
+
+                        <li>
+                            Send the wording, logo or design you want engraved.
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="quote.html"
+                        class="button button-dark"
+                    >
+                        Send Us Your Item
+                    </a>
+
+                </div>
+
+
+
+                <div class="customer-items-image">
+
+                    <img
+                        src="assets/images/contact-feature.jpg"
+                        alt="Various items for custom laser engraving"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ORDER TIPS
+    ================================================= -->
+
+    <section class="order-tips">
+
+        <div class="content-container">
+
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow">
+                    Before You Submit
+                </p>
+
+                <h2>
+                    A Few Things to Know
+                </h2>
+
+            </div>
+
+
+
+            <div class="tips-grid">
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        Custom Means Custom
+                    </h3>
+
+                    <p>
+                        Pricing can vary based on the item,
+                        material, artwork, engraving area,
+                        quantity and project complexity.
+                    </p>
+
+                </div>
+
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        Give Us Time
+                    </h3>
+
+                    <p>
+                        If your project is for a retirement,
+                        wedding, birthday or other event,
+                        contact us as early as possible.
+                    </p>
+
+                </div>
+
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        Double Check Names
+                    </h3>
+
+                    <p>
+                        Review names, dates, ranks, titles and
+                        other personalized text carefully before
+                        approving your project.
+                    </p>
+
+                </div>
+
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        Ask Questions
+                    </h3>
+
+                    <p>
+                        If you are not sure whether your idea
+                        will work, ask. A photo is usually the
+                        easiest place to start.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FINAL CTA
+    ================================================= -->
+
+    <section class="final-cta">
+
+        <div class="content-container">
+
+            <div class="final-cta-content">
+
+                <p class="section-eyebrow light">
+                    Ready When You Are
+                </p>
+
+                <h2>
+                    Start Your Custom Order
+                </h2>
+
+                <p>
+                    Tell us what you want to create and send
+                    any photos or artwork you already have.
+                </p>
+
+                <a
+                    href="quote.html"
+                    class="button button-gold"
+                >
+                    Request a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="content-container">
+
+        <div class="footer-grid">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="assets/images/logo-white.png"
+                        alt="Lasered Treasure"
+                    >
+
+                </a>
+
+                <p>
+                    Custom laser engraving, personalized gifts,
+                    awards and custom projects in Portsmouth,
+                    Virginia.
+                </p>
+
+            </div>
+
+
+
+            <!-- Explore -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="what-we-engrave.html">
+                    What We Engrave
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="custom-orders.html">
+                    Custom Orders
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+            </div>
+
+
+
+            <!-- Help -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Help
+                </h3>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+                <a href="quote.html">
+                    Request a Quote
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Portsmouth, Virginia
+                </p>
+
+                <p>
+                    Serving Hampton Roads and beyond.
+                </p>
+
+                <a href="tel:+17573736646">
+                    (757) 373-6646
+                </a>
+
+                <!-- Replace with preferred business email -->
+
+                <a href="mailto:laseredtreasure@gmail.com">
+                    laseredtreasure@gmail.com
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy;
+                <span id="currentYear"></span>
+                Lasered Treasure. All rights reserved.
+            </p>
+
+            <p>
+                Custom laser engraving in Portsmouth, Virginia.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
