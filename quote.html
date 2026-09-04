@@ -1,1 +1,2249 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Request a Quote | Lasered Treasure</title>
+
+    <meta
+        name="description"
+        content="Request a quote for custom laser engraving from Lasered Treasure in Portsmouth, Virginia. Send your project details, photos, artwork and deadline."
+    >
+
+    <meta
+        name="keywords"
+        content="laser engraving quote Portsmouth VA, custom engraving quote Hampton Roads, personalized gifts Portsmouth, custom laser engraving"
+    >
+
+    <meta
+        name="author"
+        content="Lasered Treasure"
+    >
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Request a Quote | Lasered Treasure"
+    >
+
+    <meta
+        property="og:description"
+        content="Tell Lasered Treasure about your custom engraving project and request a quote."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://laseredtreasure.com/quote.html"
+    >
+
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/styles.css"
+    >
+
+
+    <!-- Quote Page Styles -->
+
+    <style>
+
+        /* =============================================
+           PAGE INTRO
+        ============================================= */
+
+        .quote-intro {
+            padding:
+                80px 0 35px;
+
+            background: var(--cream);
+        }
+
+
+        .quote-intro .section-heading {
+            margin-bottom: 0;
+        }
+
+
+
+        /* =============================================
+           QUOTE LAYOUT
+        ============================================= */
+
+        .quote-section {
+            padding:
+                30px 0 105px;
+
+            background: var(--cream);
+        }
+
+
+        .quote-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr) 320px;
+
+            align-items: start;
+
+            gap: 50px;
+        }
+
+
+
+        /* =============================================
+           MAIN FORM
+        ============================================= */
+
+        .quote-form-card {
+            padding: 42px;
+
+            background: var(--white);
+
+            border:
+                1px solid var(--border-light);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+
+
+        .form-section {
+            margin-bottom: 44px;
+        }
+
+
+        .form-section:last-of-type {
+            margin-bottom: 28px;
+        }
+
+
+        .form-section-heading {
+            margin-bottom: 25px;
+            padding-bottom: 14px;
+
+            border-bottom:
+                1px solid var(--border-light);
+        }
+
+
+        .form-section-heading span {
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: var(--gold-dark);
+
+            font-size: 0.67rem;
+            font-weight: 800;
+
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+
+        .form-section-heading h2 {
+            margin-bottom: 0;
+
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+
+
+        /* =============================================
+           FORM GRID
+        ============================================= */
+
+        .quote-form-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 22px;
+        }
+
+
+        .quote-form-group {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+
+        .quote-form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+
+        .quote-form-group label {
+            color: var(--text-dark);
+
+            font-size: 0.75rem;
+            font-weight: 800;
+
+            letter-spacing: 0.035em;
+
+            text-transform: uppercase;
+        }
+
+
+        .required {
+            color: #9e241b;
+        }
+
+
+        .quote-form-group input,
+        .quote-form-group select,
+        .quote-form-group textarea {
+            width: 100%;
+
+            padding:
+                13px 14px;
+
+            color: var(--text-dark);
+
+            background: #ffffff;
+
+            border:
+                1px solid #cec5b7;
+
+            border-radius: 0;
+
+            outline: none;
+
+            transition:
+                border-color var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .quote-form-group textarea {
+            min-height: 160px;
+
+            resize: vertical;
+        }
+
+
+        .quote-form-group input:focus,
+        .quote-form-group select:focus,
+        .quote-form-group textarea:focus {
+            border-color: var(--gold);
+
+            box-shadow:
+                0 0 0 3px rgba(198, 146, 60, 0.13);
+        }
+
+
+        .field-note {
+            margin: 0;
+
+            color: #777168;
+
+            font-size: 0.75rem;
+
+            line-height: 1.5;
+        }
+
+
+
+        /* =============================================
+           RADIO BUTTONS
+        ============================================= */
+
+        .radio-group {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        .radio-option {
+            position: relative;
+
+            flex:
+                1 1 135px;
+        }
+
+
+        .radio-option input {
+            position: absolute;
+
+            opacity: 0;
+
+            pointer-events: none;
+        }
+
+
+        .radio-option label {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding:
+                11px 15px;
+
+            color: var(--text-dark);
+
+            background: var(--cream);
+
+            border:
+                1px solid var(--border-light);
+
+            cursor: pointer;
+
+            font-size: 0.74rem;
+            font-weight: 700;
+
+            text-align: center;
+
+            text-transform: none;
+
+            transition:
+                border-color var(--transition),
+                background var(--transition),
+                color var(--transition);
+        }
+
+
+        .radio-option input:checked + label {
+            color: var(--black);
+
+            background:
+                rgba(198, 146, 60, 0.23);
+
+            border-color: var(--gold);
+        }
+
+
+        .radio-option label:hover {
+            border-color: var(--gold);
+        }
+
+
+
+        /* =============================================
+           FILE UPLOADS
+        ============================================= */
+
+        .file-upload-box {
+            position: relative;
+
+            padding:
+                30px 20px;
+
+            background: var(--cream);
+
+            border:
+                2px dashed #c7bba9;
+
+            text-align: center;
+
+            transition:
+                border-color var(--transition),
+                background var(--transition);
+        }
+
+
+        .file-upload-box:hover {
+            border-color: var(--gold);
+
+            background: #faf6ef;
+        }
+
+
+        .file-upload-box input[type="file"] {
+            padding: 10px;
+
+            border: 0;
+
+            background: transparent;
+        }
+
+
+        .file-upload-title {
+            display: block;
+
+            margin-bottom: 6px;
+
+            font-weight: 800;
+        }
+
+
+        .file-upload-description {
+            display: block;
+
+            margin-bottom: 15px;
+
+            color: var(--text-medium);
+
+            font-size: 0.8rem;
+        }
+
+
+
+        /* =============================================
+           CHECKBOX
+        ============================================= */
+
+        .agreement {
+            display: flex;
+
+            gap: 12px;
+
+            align-items: flex-start;
+
+            margin-top: 15px;
+        }
+
+
+        .agreement input {
+            width: 18px;
+            height: 18px;
+
+            flex: 0 0 18px;
+
+            margin-top: 3px;
+
+            accent-color: var(--gold-dark);
+        }
+
+
+        .agreement label {
+            color: var(--text-medium);
+
+            font-size: 0.81rem;
+
+            line-height: 1.6;
+        }
+
+
+
+        /* =============================================
+           SUBMIT
+        ============================================= */
+
+        .quote-submit {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding-top: 25px;
+
+            border-top:
+                1px solid var(--border-light);
+        }
+
+
+        .quote-submit p {
+            max-width: 400px;
+
+            margin-bottom: 0;
+
+            color: var(--text-medium);
+
+            font-size: 0.78rem;
+        }
+
+
+        .quote-submit .button {
+            min-width: 210px;
+
+            border: 0;
+        }
+
+
+
+        /* =============================================
+           SIDEBAR
+        ============================================= */
+
+        .quote-sidebar {
+            position: sticky;
+
+            top: 30px;
+        }
+
+
+        .quote-sidebar-card {
+            padding:
+                32px 28px;
+
+            color: var(--white);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0c0c0b,
+                    #1b1813
+                );
+        }
+
+
+        .quote-sidebar-card h2 {
+            margin-bottom: 16px;
+
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+
+        .quote-sidebar-card > p {
+            color: #c8c2b9;
+
+            font-size: 0.88rem;
+        }
+
+
+        .quote-sidebar-list {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 18px;
+
+            margin-top: 28px;
+        }
+
+
+        .quote-sidebar-item {
+            display: flex;
+
+            gap: 14px;
+
+            align-items: flex-start;
+        }
+
+
+        .sidebar-number {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex:
+                0 0 34px;
+
+            width: 34px;
+            height: 34px;
+
+            color: var(--black);
+
+            background: var(--gold);
+
+            font-size: 0.76rem;
+            font-weight: 800;
+        }
+
+
+        .quote-sidebar-item strong {
+            display: block;
+
+            margin-bottom: 3px;
+
+            color: var(--white);
+
+            font-size: 0.82rem;
+        }
+
+
+        .quote-sidebar-item span {
+            display: block;
+
+            color: #aaa49b;
+
+            font-size: 0.77rem;
+
+            line-height: 1.5;
+        }
+
+
+        .sidebar-contact {
+            margin-top: 28px;
+            padding-top: 24px;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.12);
+        }
+
+
+        .sidebar-contact p {
+            margin-bottom: 6px;
+
+            color: #aaa49b;
+
+            font-size: 0.76rem;
+        }
+
+
+        .sidebar-contact a {
+            color: var(--gold-light);
+
+            font-weight: 700;
+        }
+
+
+
+        /* =============================================
+           FORM PRIVACY NOTE
+        ============================================= */
+
+        .privacy-note {
+            padding: 80px 0;
+
+            background: var(--white);
+        }
+
+
+        .privacy-note-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+
+        .privacy-card {
+            padding: 28px;
+
+            background: var(--cream);
+        }
+
+
+        .privacy-card h3 {
+            margin-bottom: 11px;
+
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+
+        .privacy-card p {
+            margin-bottom: 0;
+
+            color: var(--text-medium);
+
+            font-size: 0.85rem;
+        }
+
+
+
+        /* =============================================
+           HONEYPOT
+        ============================================= */
+
+        .website-field {
+            position: absolute;
+
+            left: -9999px;
+
+            width: 1px;
+            height: 1px;
+
+            overflow: hidden;
+        }
+
+
+
+        /* =============================================
+           RESPONSIVE
+        ============================================= */
+
+        @media (max-width: 940px) {
+
+            .quote-layout {
+                grid-template-columns: 1fr;
+            }
+
+
+            .quote-sidebar {
+                position: static;
+            }
+
+
+            .quote-sidebar-card {
+                max-width: 600px;
+
+                margin: auto;
+            }
+
+
+            .privacy-note-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .quote-intro {
+                padding:
+                    65px 0 25px;
+            }
+
+
+            .quote-section {
+                padding:
+                    20px 0 70px;
+            }
+
+
+            .quote-form-card {
+                padding:
+                    28px 20px;
+            }
+
+
+            .quote-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .quote-form-group.full-width {
+                grid-column: auto;
+            }
+
+
+            .quote-submit {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+
+            .quote-submit .button {
+                width: 100%;
+            }
+
+
+            .privacy-note {
+                padding:
+                    65px 0;
+            }
+
+
+            .privacy-note-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <a
+            href="index.html"
+            class="site-logo"
+            aria-label="Lasered Treasure Home"
+        >
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lasered Treasure"
+            >
+
+        </a>
+
+
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="what-we-engrave.html">
+                What We Engrave
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="custom-orders.html">
+                Custom Orders
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <a
+            href="quote.html"
+            class="header-quote-button"
+        >
+            Request a Quote
+        </a>
+
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNavigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <nav
+        class="mobile-navigation"
+        id="mobileNavigation"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="what-we-engrave.html">
+            What We Engrave
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="custom-orders.html">
+            Custom Orders
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="faq.html">
+            FAQ
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="quote.html"
+            class="mobile-quote-button"
+        >
+            Request a Quote
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         PAGE HERO
+    ================================================= -->
+
+    <section class="page-hero">
+
+        <div class="content-container">
+
+            <div class="page-hero-content">
+
+                <p class="section-eyebrow light">
+                    Start Your Project
+                </p>
+
+                <h1>
+                    Request a Quote
+                </h1>
+
+                <p>
+                    Tell us what you want to create. Include
+                    as much information as you can, and send
+                    photos or artwork if you have them.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================= -->
+
+    <section class="quote-intro">
+
+        <div class="content-container">
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow">
+                    Let's See What We Can Make
+                </p>
+
+                <h2>
+                    Tell Us About Your Project
+                </h2>
+
+                <p>
+                    You do not need to have every detail
+                    figured out. Give us the information you
+                    have and we can start from there.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         QUOTE FORM
+    ================================================= -->
+
+    <section class="quote-section">
+
+        <div class="content-container">
+
+            <div class="quote-layout">
+
+
+                <!-- =====================================
+                     FORM
+                ====================================== -->
+
+                <div class="quote-form-card">
+
+
+                    <!--
+                        FORM SETUP
+
+                        Replace YOUR_FORM_ID below with the
+                        Formspree form ID after creating the form.
+
+                        Example:
+                        https://formspree.io/f/xabcdefg
+                    -->
+
+                    <form
+                        action="https://formspree.io/f/YOUR_FORM_ID"
+                        method="POST"
+                        enctype="multipart/form-data"
+                        id="quoteForm"
+                    >
+
+
+                        <!-- Spam Honeypot -->
+
+                        <div
+                            class="website-field"
+                            aria-hidden="true"
+                        >
+
+                            <label for="website">
+                                Leave this field empty
+                            </label>
+
+                            <input
+                                type="text"
+                                id="website"
+                                name="_gotcha"
+                                tabindex="-1"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             CONTACT INFORMATION
+                        ================================= -->
+
+                        <div class="form-section">
+
+                            <div class="form-section-heading">
+
+                                <span>
+                                    Step 1
+                                </span>
+
+                                <h2>
+                                    Your Information
+                                </h2>
+
+                            </div>
+
+
+                            <div class="quote-form-grid">
+
+
+                                <!-- Name -->
+
+                                <div class="quote-form-group">
+
+                                    <label for="name">
+
+                                        Name
+                                        <span class="required">*</span>
+
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="Name"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                </div>
+
+
+
+                                <!-- Phone -->
+
+                                <div class="quote-form-group">
+
+                                    <label for="phone">
+
+                                        Phone
+                                        <span class="required">*</span>
+
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="Phone"
+                                        autocomplete="tel"
+                                        required
+                                    >
+
+                                </div>
+
+
+
+                                <!-- Email -->
+
+                                <div class="quote-form-group full-width">
+
+                                    <label for="email">
+
+                                        Email
+                                        <span class="required">*</span>
+
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="Email"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+
+
+                                <!-- Preferred Contact -->
+
+                                <div class="quote-form-group full-width">
+
+                                    <label>
+                                        Preferred Contact Method
+                                    </label>
+
+
+                                    <div class="radio-group">
+
+
+                                        <div class="radio-option">
+
+                                            <input
+                                                type="radio"
+                                                id="contactText"
+                                                name="Preferred Contact Method"
+                                                value="Text Message"
+                                            >
+
+                                            <label for="contactText">
+                                                Text
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="radio-option">
+
+                                            <input
+                                                type="radio"
+                                                id="contactPhone"
+                                                name="Preferred Contact Method"
+                                                value="Phone Call"
+                                            >
+
+                                            <label for="contactPhone">
+                                                Phone Call
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="radio-option">
+
+                                            <input
+                                                type="radio"
+                                                id="contactEmail"
+                                                name="Preferred Contact Method"
+                                                value="Email"
+                                            >
+
+                                            <label for="contactEmail">
+                                                Email
+                                            </label>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             PROJECT INFORMATION
+                        ================================= -->
+
+                        <div class="form-section">
+
+                            <div class="form-section-heading">
+
+                                <span>
+                                    Step 2
+                                </span>
+
+                                <h2>
+                                    Project Details
+                                </h2>
+
+                            </div>
+
+
+                            <div class="quote-form-grid">
+
+
+                                <!-- Project Type -->
+
+                                <div class="quote-form-group">
+
+                                    <label for="projectType">
+
+                                        Project Type
+                                        <span class="required">*</span>
+
+                                    </label>
+
+                                    <select
+                                        id="projectType"
+                                        name="Project Type"
+                                        required
+                                    >
+
+                                        <option
+                                            value=""
+                                            selected
+                                            disabled
+                                        >
+                                            Select one
+                                        </option>
+
+                                        <option value="Award or Plaque">
+                                            Award or Plaque
+                                        </option>
+
+                                        <option value="Personalized Gift">
+                                            Personalized Gift
+                                        </option>
+
+                                        <option value="Sign">
+                                            Sign
+                                        </option>
+
+                                        <option value="Drinkware">
+                                            Drinkware
+                                        </option>
+
+                                        <option value="Keepsake">
+                                            Keepsake
+                                        </option>
+
+                                        <option value="Business or Organization">
+                                            Business or Organization
+                                        </option>
+
+                                        <option value="Customer Supplied Item">
+                                            Customer Supplied Item
+                                        </option>
+
+                                        <option value="Other Custom Project">
+                                            Other Custom Project
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <!-- Material -->
+
+                                <div class="quote-form-group">
+
+                                    <label for="material">
+
+                                        Material
+                                    </label>
+
+                                    <select
+                                        id="material"
+                                        name="Material"
+                                    >
+
+                                        <option
+                                            value=""
+                                            selected
+                                        >
+                                            Not sure
+                                        </option>
+
+                                        <option value="Wood">
+                                            Wood
+                                        </option>
+
+                                        <option value="Glass">
+                                            Glass
+                                        </option>
+
+                                        <option value="Ceramic">
+                                            Ceramic
+                                        </option>
+
+                                        <option value="Leather">
+                                            Leather
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <!-- Quantity -->
+
+                                <div class="quote-form-group">
+
+                                    <label for="quantity">
+
+                                        Quantity
+                                        <span class="required">*</span>
+
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="quantity"
+                                        name="Quantity"
+                                        min="1"
+                                        value="1"
+                                        required
+                                    >
+
+                                </div>
+
+
+
+                                <!-- Dimensions -->
+
+                                <div class="quote-form-group">
+
+                                    <label for="dimensions">
+                                        Approximate Size
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="dimensions"
+                                        name="Approximate Dimensions"
+                                        placeholder='Example: 12" x 8"'
+                                    >
+
+                                </div>
+
+
+
+                                <!-- Needed By -->
+
+                                <div class="quote-form-group">
+
+                                    <label for="neededBy">
+                                        Needed By
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        id="neededBy"
+                                        name="Needed By Date"
+                                    >
+
+                                </div>
+
+
+
+                                <!-- Event -->
+
+                                <div class="quote-form-group">
+
+                                    <label for="occasion">
+                                        Occasion
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="occasion"
+                                        name="Occasion"
+                                        placeholder="Retirement, wedding, birthday, etc."
+                                    >
+
+                                </div>
+
+
+
+                                <!-- Description -->
+
+                                <div class="quote-form-group full-width">
+
+                                    <label for="description">
+
+                                        Tell Us What You Want
+                                        <span class="required">*</span>
+
+                                    </label>
+
+                                    <textarea
+                                        id="description"
+                                        name="Project Description"
+                                        placeholder="Describe the item, what you want engraved, wording, layout ideas, colors or anything else that will help us understand the project."
+                                        required
+                                    ></textarea>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             CUSTOMER SUPPLIED ITEM
+                        ================================= -->
+
+                        <div class="form-section">
+
+                            <div class="form-section-heading">
+
+                                <span>
+                                    Step 3
+                                </span>
+
+                                <h2>
+                                    The Item
+                                </h2>
+
+                            </div>
+
+
+                            <div class="quote-form-grid">
+
+
+                                <div class="quote-form-group full-width">
+
+                                    <label>
+                                        Do You Already Have the Item?
+                                    </label>
+
+
+                                    <div class="radio-group">
+
+
+                                        <div class="radio-option">
+
+                                            <input
+                                                type="radio"
+                                                id="haveItemYes"
+                                                name="Customer Supplied Item"
+                                                value="Yes"
+                                            >
+
+                                            <label for="haveItemYes">
+                                                Yes
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="radio-option">
+
+                                            <input
+                                                type="radio"
+                                                id="haveItemNo"
+                                                name="Customer Supplied Item"
+                                                value="No"
+                                            >
+
+                                            <label for="haveItemNo">
+                                                No
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="radio-option">
+
+                                            <input
+                                                type="radio"
+                                                id="haveItemUnsure"
+                                                name="Customer Supplied Item"
+                                                value="Not Sure"
+                                            >
+
+                                            <label for="haveItemUnsure">
+                                                Not Sure
+                                            </label>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Item Information -->
+
+                                <div class="quote-form-group full-width">
+
+                                    <label for="itemDetails">
+                                        Item Details
+                                    </label>
+
+                                    <textarea
+                                        id="itemDetails"
+                                        name="Item Details"
+                                        placeholder="If you already have the item, tell us what it is, what it is made from if known, and any other information that may help."
+                                    ></textarea>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             FILE UPLOADS
+                        ================================= -->
+
+                        <div class="form-section">
+
+                            <div class="form-section-heading">
+
+                                <span>
+                                    Step 4
+                                </span>
+
+                                <h2>
+                                    Photos &amp; Artwork
+                                </h2>
+
+                            </div>
+
+
+                            <div class="quote-form-grid">
+
+
+                                <!-- Item Photos -->
+
+                                <div class="quote-form-group full-width">
+
+                                    <label for="itemPhotos">
+                                        Photos of Your Item
+                                    </label>
+
+
+                                    <div class="file-upload-box">
+
+                                        <span class="file-upload-title">
+                                            Upload Item Photos
+                                        </span>
+
+                                        <span class="file-upload-description">
+                                            Clear photos from multiple angles are helpful.
+                                        </span>
+
+                                        <input
+                                            type="file"
+                                            id="itemPhotos"
+                                            name="Item Photos"
+                                            accept=".jpg,.jpeg,.png,.webp"
+                                            multiple
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Artwork -->
+
+                                <div class="quote-form-group full-width">
+
+                                    <label for="artwork">
+                                        Logo or Artwork
+                                    </label>
+
+
+                                    <div class="file-upload-box">
+
+                                        <span class="file-upload-title">
+                                            Upload Your Design
+                                        </span>
+
+                                        <span class="file-upload-description">
+                                            SVG, PDF, PNG or JPG files are welcome.
+                                        </span>
+
+                                        <input
+                                            type="file"
+                                            id="artwork"
+                                            name="Artwork"
+                                            accept=".svg,.pdf,.png,.jpg,.jpeg"
+                                            multiple
+                                        >
+
+                                    </div>
+
+
+                                    <p class="field-note">
+                                        If you do not have artwork yet,
+                                        that is fine. You can submit your
+                                        request without it.
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             DELIVERY
+                        ================================= -->
+
+                        <div class="form-section">
+
+                            <div class="form-section-heading">
+
+                                <span>
+                                    Step 5
+                                </span>
+
+                                <h2>
+                                    Getting Your Order
+                                </h2>
+
+                            </div>
+
+
+                            <div class="quote-form-grid">
+
+
+                                <div class="quote-form-group full-width">
+
+                                    <label>
+                                        Preferred Method
+                                    </label>
+
+
+                                    <div class="radio-group">
+
+
+                                        <div class="radio-option">
+
+                                            <input
+                                                type="radio"
+                                                id="deliveryPickup"
+                                                name="Order Fulfillment"
+                                                value="Local Pickup"
+                                            >
+
+                                            <label for="deliveryPickup">
+                                                Local Pickup
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="radio-option">
+
+                                            <input
+                                                type="radio"
+                                                id="deliveryShipping"
+                                                name="Order Fulfillment"
+                                                value="Shipping"
+                                            >
+
+                                            <label for="deliveryShipping">
+                                                Shipping
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="radio-option">
+
+                                            <input
+                                                type="radio"
+                                                id="deliveryUnsure"
+                                                name="Order Fulfillment"
+                                                value="Not Sure"
+                                            >
+
+                                            <label for="deliveryUnsure">
+                                                Not Sure
+                                            </label>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             FINAL AGREEMENT
+                        ================================= -->
+
+                        <div class="agreement">
+
+                            <input
+                                type="checkbox"
+                                id="accuracy"
+                                name="Information Confirmed"
+                                value="Yes"
+                                required
+                            >
+
+                            <label for="accuracy">
+                                I understand this form is a quote
+                                request and does not place an order.
+                                Project availability, pricing and
+                                details must be confirmed by Lasered
+                                Treasure before work begins.
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             SUBMIT
+                        ================================= -->
+
+                        <div class="quote-submit">
+
+                            <p>
+                                Required fields are marked with an
+                                asterisk. Please double check names,
+                                dates and other personalized information.
+                            </p>
+
+                            <button
+                                type="submit"
+                                class="button button-gold"
+                            >
+                                Send Quote Request
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     SIDEBAR
+                ====================================== -->
+
+                <aside class="quote-sidebar">
+
+                    <div class="quote-sidebar-card">
+
+                        <p class="section-eyebrow light">
+                            Before You Submit
+                        </p>
+
+                        <h2>
+                            Help Us Understand Your Idea
+                        </h2>
+
+                        <p>
+                            The more information you include,
+                            the easier it is for us to review
+                            your project.
+                        </p>
+
+
+                        <div class="quote-sidebar-list">
+
+
+                            <div class="quote-sidebar-item">
+
+                                <div class="sidebar-number">
+                                    1
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Send a Photo
+                                    </strong>
+
+                                    <span>
+                                        If you already have the
+                                        item, show us what it
+                                        looks like.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="quote-sidebar-item">
+
+                                <div class="sidebar-number">
+                                    2
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Include Your Deadline
+                                    </strong>
+
+                                    <span>
+                                        Tell us if you need it
+                                        for a specific event or
+                                        date.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="quote-sidebar-item">
+
+                                <div class="sidebar-number">
+                                    3
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Send Your Artwork
+                                    </strong>
+
+                                    <span>
+                                        Upload your logo, design
+                                        or inspiration image if
+                                        you have one.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="quote-sidebar-item">
+
+                                <div class="sidebar-number">
+                                    4
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Check the Details
+                                    </strong>
+
+                                    <span>
+                                        Double check names,
+                                        dates, titles and other
+                                        personalized wording.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="sidebar-contact">
+
+                            <p>
+                                Prefer to talk first?
+                            </p>
+
+                            <a href="tel:+17573736646">
+                                (757) 373-6646
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INFORMATION CARDS
+    ================================================= -->
+
+    <section class="privacy-note">
+
+        <div class="content-container">
+
+            <div class="privacy-note-grid">
+
+
+                <div class="privacy-card">
+
+                    <h3>
+                        This Is a Quote Request
+                    </h3>
+
+                    <p>
+                        Submitting the form does not automatically
+                        place an order or guarantee project
+                        availability.
+                    </p>
+
+                </div>
+
+
+
+                <div class="privacy-card">
+
+                    <h3>
+                        Custom Pricing
+                    </h3>
+
+                    <p>
+                        Pricing depends on the material, size,
+                        artwork, engraving, quantity and overall
+                        project requirements.
+                    </p>
+
+                </div>
+
+
+
+                <div class="privacy-card">
+
+                    <h3>
+                        Have Something Unusual?
+                    </h3>
+
+                    <p>
+                        Send it anyway. A photo and description
+                        are often enough for us to determine the
+                        next step.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="content-container">
+
+        <div class="footer-grid">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="assets/images/logo-white.png"
+                        alt="Lasered Treasure"
+                    >
+
+                </a>
+
+                <p>
+                    Custom laser engraving, personalized gifts,
+                    awards and custom projects in Portsmouth,
+                    Virginia.
+                </p>
+
+            </div>
+
+
+
+            <!-- Explore -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="what-we-engrave.html">
+                    What We Engrave
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="custom-orders.html">
+                    Custom Orders
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+            </div>
+
+
+
+            <!-- Help -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Help
+                </h3>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+                <a href="quote.html">
+                    Request a Quote
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Portsmouth, Virginia
+                </p>
+
+                <p>
+                    Serving Hampton Roads and beyond.
+                </p>
+
+                <a href="tel:+17573736646">
+                    (757) 373-6646
+                </a>
+
+                <!--
+                    Replace with their verified preferred email
+                    before the website goes live.
+                -->
+
+                <a href="mailto:laseredtreasure@gmail.com">
+                    laseredtreasure@gmail.com
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy;
+                <span id="currentYear"></span>
+                Lasered Treasure. All rights reserved.
+            </p>
+
+            <p>
+                Custom laser engraving in Portsmouth, Virginia.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="assets/js/main.js"></script>
+
+
+<!-- =====================================================
+     QUOTE PAGE SCRIPT
+
+     This automatically selects the material when someone
+     comes from a link such as:
+
+     quote.html?material=wood
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const parameters =
+        new URLSearchParams(window.location.search);
+
+    const requestedMaterial =
+        parameters.get("material");
+
+    const materialSelect =
+        document.getElementById("material");
+
+
+    if (
+        requestedMaterial &&
+        materialSelect
+    ) {
+
+        const materialMap = {
+
+            wood: "Wood",
+            glass: "Glass",
+            ceramic: "Ceramic",
+            ceramics: "Ceramic",
+            leather: "Leather",
+            other: "Other"
+
+        };
+
+
+        const selectedMaterial =
+            materialMap[
+                requestedMaterial.toLowerCase()
+            ];
+
+
+        if (selectedMaterial) {
+
+            materialSelect.value =
+                selectedMaterial;
+
+        }
+
+    }
+
+});
+
+</script>
+
+
+</body>
+
+</html>
