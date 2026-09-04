@@ -1,1 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Frequently Asked Questions | Lasered Treasure</title>
+
+    <meta
+        name="description"
+        content="Get answers to common questions about custom laser engraving, materials, artwork, custom orders and quote requests from Lasered Treasure in Portsmouth, Virginia."
+    >
+
+    <meta
+        name="keywords"
+        content="laser engraving FAQ Portsmouth VA, custom engraving questions, Lasered Treasure, engraving Hampton Roads, custom engraving quote"
+    >
+
+    <meta
+        name="author"
+        content="Lasered Treasure"
+    >
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Frequently Asked Questions | Lasered Treasure"
+    >
+
+    <meta
+        property="og:description"
+        content="Answers to common questions about custom laser engraving and custom orders at Lasered Treasure."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://laseredtreasure.com/faq.html"
+    >
+
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/styles.css"
+    >
+
+
+    <!-- Page Specific Styles -->
+
+    <style>
+
+        /* =============================================
+           FAQ INTRO
+        ============================================= */
+
+        .faq-intro {
+            padding: 85px 0 35px;
+
+            background: var(--cream);
+        }
+
+
+        .faq-intro .section-heading {
+            margin-bottom: 0;
+        }
+
+
+
+        /* =============================================
+           FAQ LAYOUT
+        ============================================= */
+
+        .faq-section {
+            padding: 30px 0 100px;
+
+            background: var(--cream);
+        }
+
+
+        .faq-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr) 300px;
+
+            align-items: start;
+
+            gap: 55px;
+        }
+
+
+
+        /* =============================================
+           FAQ ACCORDION
+        ============================================= */
+
+        .faq-list {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+
+        .faq-item {
+            overflow: hidden;
+
+            background: var(--white);
+
+            border:
+                1px solid var(--border-light);
+
+            transition:
+                border-color var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .faq-item:hover {
+            border-color:
+                rgba(198, 146, 60, 0.55);
+        }
+
+
+        .faq-item.open {
+            border-color:
+                rgba(198, 146, 60, 0.7);
+
+            box-shadow:
+                0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+
+        .faq-question {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            width: 100%;
+
+            padding: 23px 25px;
+
+            color: var(--text-dark);
+
+            background: transparent;
+
+            border: 0;
+
+            text-align: left;
+
+            font-size: 0.93rem;
+            font-weight: 800;
+        }
+
+
+        .faq-question:hover {
+            color: var(--gold-dark);
+        }
+
+
+        .faq-icon {
+            position: relative;
+
+            flex: 0 0 24px;
+
+            width: 24px;
+            height: 24px;
+        }
+
+
+        .faq-icon::before,
+        .faq-icon::after {
+            content: "";
+
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            width: 14px;
+            height: 2px;
+
+            background: var(--gold-dark);
+
+            transform:
+                translate(-50%, -50%);
+
+            transition:
+                transform var(--transition),
+                opacity var(--transition);
+        }
+
+
+        .faq-icon::after {
+            transform:
+                translate(-50%, -50%)
+                rotate(90deg);
+        }
+
+
+        .faq-item.open .faq-icon::after {
+            opacity: 0;
+
+            transform:
+                translate(-50%, -50%)
+                rotate(0);
+        }
+
+
+        .faq-answer {
+            display: none;
+
+            padding:
+                0 25px 25px;
+
+            color: var(--text-medium);
+        }
+
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .faq-answer a {
+            color: var(--gold-dark);
+
+            font-weight: 700;
+        }
+
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* =============================================
+           FAQ SIDEBAR
+        ============================================= */
+
+        .faq-sidebar {
+            position: sticky;
+
+            top: 30px;
+        }
+
+
+        .faq-help-card {
+            padding: 32px 28px;
+
+            color: var(--white);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0d0d0c,
+                    #1c1914
+                );
+        }
+
+
+        .faq-help-card .section-eyebrow {
+            color: var(--gold-light);
+        }
+
+
+        .faq-help-card h2 {
+            margin-bottom: 16px;
+
+            font-size: 1.65rem;
+            font-weight: 800;
+
+            letter-spacing: -0.035em;
+        }
+
+
+        .faq-help-card p {
+            color: #c7c1b8;
+
+            font-size: 0.9rem;
+        }
+
+
+        .faq-help-card .button {
+            width: 100%;
+
+            margin-top: 8px;
+        }
+
+
+        .faq-sidebar-link {
+            display: block;
+
+            margin-top: 20px;
+
+            color: #d8d2c9;
+
+            font-size: 0.8rem;
+            font-weight: 700;
+
+            text-align: center;
+        }
+
+
+        .faq-sidebar-link:hover {
+            color: var(--gold-light);
+        }
+
+
+
+        /* =============================================
+           QUICK QUESTIONS
+        ============================================= */
+
+        .quick-questions {
+            padding: 95px 0;
+
+            background: var(--white);
+        }
+
+
+        .quick-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 24px;
+        }
+
+
+        .quick-card {
+            padding: 34px 30px;
+
+            background: var(--cream);
+
+            border-top:
+                4px solid var(--gold);
+        }
+
+
+        .quick-card h3 {
+            margin-bottom: 12px;
+
+            font-size: 1.05rem;
+            font-weight: 800;
+        }
+
+
+        .quick-card p {
+            margin-bottom: 0;
+
+            color: var(--text-medium);
+
+            font-size: 0.9rem;
+        }
+
+
+
+        /* =============================================
+           RESPONSIVE
+        ============================================= */
+
+        @media (max-width: 940px) {
+
+            .faq-layout {
+                grid-template-columns: 1fr;
+            }
+
+
+            .faq-sidebar {
+                position: static;
+            }
+
+
+            .faq-help-card {
+                max-width: 550px;
+
+                margin: auto;
+            }
+
+
+            .quick-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .faq-intro {
+                padding:
+                    65px 0 25px;
+            }
+
+
+            .faq-section {
+                padding:
+                    20px 0 70px;
+            }
+
+
+            .faq-question {
+                padding:
+                    20px 18px;
+
+                font-size: 0.88rem;
+            }
+
+
+            .faq-answer {
+                padding:
+                    0 18px 20px;
+            }
+
+
+            .quick-questions {
+                padding:
+                    70px 0;
+            }
+
+
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <a
+            href="index.html"
+            class="site-logo"
+            aria-label="Lasered Treasure Home"
+        >
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lasered Treasure"
+            >
+
+        </a>
+
+
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="what-we-engrave.html">
+                What We Engrave
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="custom-orders.html">
+                Custom Orders
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a
+                href="faq.html"
+                class="active"
+            >
+                FAQ
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <a
+            href="quote.html"
+            class="header-quote-button"
+        >
+            Request a Quote
+        </a>
+
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNavigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <nav
+        class="mobile-navigation"
+        id="mobileNavigation"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="what-we-engrave.html">
+            What We Engrave
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="custom-orders.html">
+            Custom Orders
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a
+            href="faq.html"
+            class="active"
+        >
+            FAQ
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="quote.html"
+            class="mobile-quote-button"
+        >
+            Request a Quote
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         PAGE HERO
+    ================================================= -->
+
+    <section class="page-hero">
+
+        <div class="content-container">
+
+            <div class="page-hero-content">
+
+                <p class="section-eyebrow light">
+                    Need to Know
+                </p>
+
+                <h1>
+                    Frequently Asked Questions
+                </h1>
+
+                <p>
+                    Have questions about materials, artwork,
+                    custom items or starting an order? You may
+                    find the answer below.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================= -->
+
+    <section class="faq-intro">
+
+        <div class="content-container">
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow">
+                    Before You Order
+                </p>
+
+                <h2>
+                    Common Questions
+                </h2>
+
+                <p>
+                    Every custom engraving project is a little
+                    different. These answers cover some of the
+                    questions we hear most often.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FAQ ACCORDION
+    ================================================= -->
+
+    <section class="faq-section">
+
+        <div class="content-container">
+
+            <div class="faq-layout">
+
+
+                <!-- =====================================
+                     FAQ QUESTIONS
+                ====================================== -->
+
+                <div class="faq-list">
+
+
+                    <!-- QUESTION 1 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                What materials can you engrave?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                We work with wood, glass, ceramics,
+                                leather and other materials depending
+                                on the specific item.
+                            </p>
+
+                            <p>
+                                If you are not sure whether your item
+                                can be engraved, send us a photo and
+                                tell us what it is made from.
+                            </p>
+
+                            <p>
+                                You can also visit our
+                                <a href="what-we-engrave.html">
+                                    What We Engrave
+                                </a>
+                                page for more information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 2 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Can I bring you something I already own?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Possibly. Customer supplied items need
+                                to be reviewed before we can determine
+                                whether they are suitable for laser
+                                engraving.
+                            </p>
+
+                            <p>
+                                Start by sending us clear photos of the
+                                item, its approximate dimensions and the
+                                material it is made from, if known.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 3 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Can you engrave my logo?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                In many cases, yes. Send us the best
+                                quality version of your logo that you
+                                have.
+                            </p>
+
+                            <p>
+                                Vector files such as SVG or certain PDF
+                                files can be helpful, but PNG and JPG
+                                files can also be reviewed.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 4 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                What if I do not have artwork?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                That is fine. Start with whatever you
+                                have.
+                            </p>
+
+                            <p>
+                                You can send us a description, sketch,
+                                inspiration photo or example of the type
+                                of design you have in mind. We can then
+                                discuss what may work for your project.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 5 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                How much does custom engraving cost?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Pricing depends on the item, material,
+                                engraving area, artwork, quantity and
+                                complexity of the project.
+                            </p>
+
+                            <p>
+                                The best way to get accurate pricing is
+                                to submit a
+                                <a href="quote.html">
+                                    quote request
+                                </a>
+                                with as much information as possible.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 6 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                How long will my order take?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Turnaround time can vary based on the
+                                type of project, quantity, materials and
+                                current workload.
+                            </p>
+
+                            <p>
+                                If you need your order for a specific
+                                event or date, include that deadline
+                                when you request your quote.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 7 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Do you accept rush orders?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                If you have a short deadline, contact us
+                                and tell us exactly when you need the
+                                project.
+                            </p>
+
+                            <p>
+                                Availability will depend on the project
+                                and current workload, so rush service
+                                cannot be guaranteed.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 8 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Can I order more than one of the same item?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes, you can ask about multiple items or
+                                larger quantities.
+                            </p>
+
+                            <p>
+                                Include the quantity you need when you
+                                submit your quote request so we can
+                                review the project correctly.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 9 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Can each item have a different name?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Many custom projects can include
+                                individual names, dates, titles or other
+                                personalization.
+                            </p>
+
+                            <p>
+                                Tell us how many unique versions you
+                                need when submitting your request.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 10 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Do I get to approve the design first?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Project details should be confirmed
+                                before engraving begins.
+                            </p>
+
+                            <p>
+                                Make sure you carefully review names,
+                                dates, ranks, titles, spelling and other
+                                personalized information before giving
+                                final approval.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 11 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Do you ship orders?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Contact us about shipping when you
+                                request your quote.
+                            </p>
+
+                            <p>
+                                Shipping options can depend on the item,
+                                size, destination and project.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 12 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                Where are you located?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Lasered Treasure is located in
+                                Portsmouth, Virginia.
+                            </p>
+
+                            <p>
+                                Contact us before visiting so we can
+                                discuss your project and make any
+                                necessary arrangements.
+                            </p>
+
+                            <p>
+                                Visit our
+                                <a href="contact.html">
+                                    Contact page
+                                </a>
+                                for more information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 13 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                What information should I include with my quote request?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Include as much of the following as
+                                possible:
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    What you want made
+                                </li>
+
+                                <li>
+                                    Quantity
+                                </li>
+
+                                <li>
+                                    Material
+                                </li>
+
+                                <li>
+                                    Approximate size
+                                </li>
+
+                                <li>
+                                    Names or wording
+                                </li>
+
+                                <li>
+                                    Artwork or logo
+                                </li>
+
+                                <li>
+                                    Photos of the item
+                                </li>
+
+                                <li>
+                                    The date you need it
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUESTION 14 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span>
+                                I have an unusual idea. Should I still ask?
+                            </span>
+
+                            <span
+                                class="faq-icon"
+                                aria-hidden="true"
+                            ></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Absolutely.
+                            </p>
+
+                            <p>
+                                If you are not sure whether something
+                                can be engraved, send us a picture and
+                                explain what you want to do.
+                            </p>
+
+                            <p>
+                                We would rather review the idea than
+                                have you assume it cannot be done.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =====================================
+                     SIDEBAR
+                ====================================== -->
+
+                <aside class="faq-sidebar">
+
+                    <div class="faq-help-card">
+
+                        <p class="section-eyebrow">
+                            Still Have Questions?
+                        </p>
+
+                        <h2>
+                            Just Ask.
+                        </h2>
+
+                        <p>
+                            Custom projects do not always fit into
+                            a simple answer. Send us your question,
+                            photo or idea and we can take a look.
+                        </p>
+
+                        <a
+                            href="quote.html"
+                            class="button button-gold"
+                        >
+                            Request a Quote
+                        </a>
+
+                        <a
+                            href="contact.html"
+                            class="faq-sidebar-link"
+                        >
+                            Contact Lasered Treasure
+                        </a>
+
+                    </div>
+
+                </aside>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         QUICK TIPS
+    ================================================= -->
+
+    <section class="quick-questions">
+
+        <div class="content-container">
+
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow">
+                    Make It Easier
+                </p>
+
+                <h2>
+                    Before You Contact Us
+                </h2>
+
+            </div>
+
+
+
+            <div class="quick-grid">
+
+
+                <div class="quick-card">
+
+                    <h3>
+                        Take a Picture
+                    </h3>
+
+                    <p>
+                        If you already own the item, clear photos
+                        are one of the easiest ways for us to
+                        understand what you have.
+                    </p>
+
+                </div>
+
+
+
+                <div class="quick-card">
+
+                    <h3>
+                        Know Your Deadline
+                    </h3>
+
+                    <p>
+                        If the project is for an event, retirement,
+                        wedding, birthday or other occasion, tell
+                        us when you need it.
+                    </p>
+
+                </div>
+
+
+
+                <div class="quick-card">
+
+                    <h3>
+                        Check Your Spelling
+                    </h3>
+
+                    <p>
+                        Double check names, dates, titles and other
+                        personalized wording before approving your
+                        project.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FINAL CTA
+    ================================================= -->
+
+    <section class="final-cta">
+
+        <div class="content-container">
+
+            <div class="final-cta-content">
+
+                <p class="section-eyebrow light">
+                    Have Your Answer?
+                </p>
+
+                <h2>
+                    Tell Us What You Want to Make
+                </h2>
+
+                <p>
+                    Send us your idea, photos and artwork and
+                    we can start reviewing your project.
+                </p>
+
+                <a
+                    href="quote.html"
+                    class="button button-gold"
+                >
+                    Request a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="content-container">
+
+        <div class="footer-grid">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="assets/images/logo-white.png"
+                        alt="Lasered Treasure"
+                    >
+
+                </a>
+
+                <p>
+                    Custom laser engraving, personalized gifts,
+                    awards and custom projects in Portsmouth,
+                    Virginia.
+                </p>
+
+            </div>
+
+
+
+            <!-- Explore -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="what-we-engrave.html">
+                    What We Engrave
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="custom-orders.html">
+                    Custom Orders
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+            </div>
+
+
+
+            <!-- Help -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Help
+                </h3>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+                <a href="quote.html">
+                    Request a Quote
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Portsmouth, Virginia
+                </p>
+
+                <p>
+                    Serving Hampton Roads and beyond.
+                </p>
+
+                <a href="tel:+17573736646">
+                    (757) 373-6646
+                </a>
+
+                <!-- Replace with preferred business email -->
+
+                <a href="mailto:laseredtreasure@gmail.com">
+                    laseredtreasure@gmail.com
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy;
+                <span id="currentYear"></span>
+                Lasered Treasure. All rights reserved.
+            </p>
+
+            <p>
+                Custom laser engraving in Portsmouth, Virginia.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
