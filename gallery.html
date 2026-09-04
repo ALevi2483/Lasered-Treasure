@@ -1,1 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Lasered Treasure</title>
+
+    <meta
+        name="description"
+        content="Browse custom laser engraving projects from Lasered Treasure in Portsmouth, Virginia. See personalized gifts, plaques, wood engraving, glass engraving, leather projects, signs and more."
+    >
+
+    <meta
+        name="keywords"
+        content="laser engraving gallery Portsmouth VA, custom engraving Hampton Roads, engraved gifts Portsmouth, custom plaques, wood engraving, glass engraving"
+    >
+
+    <meta name="author" content="Lasered Treasure">
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Gallery | Lasered Treasure"
+    >
+
+    <meta
+        property="og:description"
+        content="See examples of custom laser engraving projects created by Lasered Treasure in Portsmouth, Virginia."
+    >
+
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:url"
+        content="https://laseredtreasure.com/gallery.html"
+    >
+
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/styles.css"
+    >
+
+
+    <!--
+        Gallery-specific CSS.
+
+        We will eventually move this section into styles.css,
+        but keeping it here for now lets this page work
+        immediately without changing another file.
+    -->
+
+    <style>
+
+        /* =============================================
+           GALLERY FILTERS
+        ============================================= */
+
+        .gallery-filter-section {
+            padding: 55px 0 35px;
+            background: var(--cream);
+        }
+
+
+        .gallery-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+
+        .gallery-filter-button {
+            padding: 11px 18px;
+
+            color: var(--text-dark);
+            background: transparent;
+
+            border: 1px solid #cfc6b8;
+
+            font-size: 0.7rem;
+            font-weight: 800;
+
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+
+            transition:
+                background var(--transition),
+                color var(--transition),
+                border-color var(--transition),
+                transform var(--transition);
+        }
+
+
+        .gallery-filter-button:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+
+        .gallery-filter-button.active {
+            color: var(--black);
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+
+
+
+        /* =============================================
+           GALLERY GRID
+        ============================================= */
+
+        .gallery-section {
+            padding: 30px 0 100px;
+            background: var(--cream);
+        }
+
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+
+        .gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 360px;
+
+            background: #d8d0c4;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.07);
+
+            transition:
+                transform var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 14px 30px rgba(0, 0, 0, 0.14);
+        }
+
+
+        .gallery-item.hidden {
+            display: none;
+        }
+
+
+        .gallery-image {
+            position: relative;
+
+            height: 315px;
+
+            overflow: hidden;
+        }
+
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.45s ease;
+        }
+
+
+        .gallery-item:hover .gallery-image img {
+            transform: scale(1.05);
+        }
+
+
+        .gallery-image-overlay {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            color: var(--white);
+
+            background:
+                rgba(0, 0, 0, 0.38);
+
+            opacity: 0;
+
+            transition:
+                opacity var(--transition);
+        }
+
+
+        .gallery-item:hover .gallery-image-overlay {
+            opacity: 1;
+        }
+
+
+        .gallery-view-icon {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 52px;
+            height: 52px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.75);
+
+            border-radius: 50%;
+
+            font-size: 1.4rem;
+        }
+
+
+        .gallery-item-content {
+            padding: 20px 21px 22px;
+
+            background: var(--white);
+        }
+
+
+        .gallery-category {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: var(--gold-dark);
+
+            font-size: 0.66rem;
+            font-weight: 800;
+
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+
+
+        .gallery-item-content h2 {
+            margin-bottom: 0;
+
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+
+
+        /* =============================================
+           GALLERY INTRO
+        ============================================= */
+
+        .gallery-intro {
+            padding: 78px 0 20px;
+
+            background: var(--cream);
+        }
+
+
+        .gallery-intro .section-heading {
+            margin-bottom: 0;
+        }
+
+
+
+        /* =============================================
+           LIGHTBOX
+        ============================================= */
+
+        .gallery-lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9999;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px;
+
+            background:
+                rgba(0, 0, 0, 0.93);
+        }
+
+
+        .gallery-lightbox.open {
+            display: flex;
+        }
+
+
+        body.lightbox-open {
+            overflow: hidden;
+        }
+
+
+        .lightbox-content {
+            position: relative;
+
+            width: min(100%, 1100px);
+
+            max-height: 90vh;
+
+            text-align: center;
+        }
+
+
+        .lightbox-content img {
+            width: auto;
+            max-width: 100%;
+
+            max-height: 78vh;
+
+            margin: 0 auto;
+
+            object-fit: contain;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .lightbox-title {
+            margin-top: 18px;
+            margin-bottom: 0;
+
+            color: var(--white);
+
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+
+        .lightbox-close {
+            position: absolute;
+
+            top: -42px;
+            right: 0;
+
+            width: 42px;
+            height: 42px;
+
+            padding: 0;
+
+            color: var(--white);
+
+            background: transparent;
+
+            border: 0;
+
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+
+        .lightbox-close:hover {
+            color: var(--gold-light);
+        }
+
+
+
+        /* =============================================
+           GALLERY MOBILE
+        ============================================= */
+
+        @media (max-width: 940px) {
+
+            .gallery-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .gallery-intro {
+                padding:
+                    60px 0 15px;
+            }
+
+
+            .gallery-filter-section {
+                padding:
+                    35px 0 25px;
+            }
+
+
+            .gallery-filters {
+                justify-content: flex-start;
+            }
+
+
+            .gallery-filter-button {
+                padding:
+                    9px 13px;
+
+                font-size: 0.63rem;
+            }
+
+
+            .gallery-section {
+                padding:
+                    20px 0 70px;
+            }
+
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .gallery-item {
+                min-height: 0;
+            }
+
+
+            .gallery-image {
+                height: 320px;
+            }
+
+
+            .gallery-lightbox {
+                padding:
+                    25px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <!-- Logo -->
+
+        <a
+            href="index.html"
+            class="site-logo"
+            aria-label="Lasered Treasure Home"
+        >
+
+            <img
+                src="assets/images/logo.png"
+                alt="Lasered Treasure"
+            >
+
+        </a>
+
+
+
+        <!-- Desktop Navigation -->
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="what-we-engrave.html">
+                What We Engrave
+            </a>
+
+            <a
+                href="gallery.html"
+                class="active"
+            >
+                Gallery
+            </a>
+
+            <a href="custom-orders.html">
+                Custom Orders
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <!-- Quote Button -->
+
+        <a
+            href="quote.html"
+            class="header-quote-button"
+        >
+            Request a Quote
+        </a>
+
+
+
+        <!-- Mobile Menu -->
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNavigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <nav
+        class="mobile-navigation"
+        id="mobileNavigation"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="what-we-engrave.html">
+            What We Engrave
+        </a>
+
+        <a
+            href="gallery.html"
+            class="active"
+        >
+            Gallery
+        </a>
+
+        <a href="custom-orders.html">
+            Custom Orders
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="faq.html">
+            FAQ
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="quote.html"
+            class="mobile-quote-button"
+        >
+            Request a Quote
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         PAGE HERO
+    ================================================= -->
+
+    <section class="page-hero">
+
+        <div class="content-container">
+
+            <div class="page-hero-content">
+
+                <p class="section-eyebrow light">
+                    Our Work
+                </p>
+
+                <h1>
+                    Gallery
+                </h1>
+
+                <p>
+                    Browse some of our custom engraving projects.
+                    Every piece starts with an idea and is created
+                    for the person, event or occasion behind it.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GALLERY INTRO
+    ================================================= -->
+
+    <section class="gallery-intro">
+
+        <div class="content-container">
+
+            <div class="section-heading centered">
+
+                <p class="section-eyebrow">
+                    Made in Portsmouth
+                </p>
+
+                <h2>
+                    See What We've Been Making
+                </h2>
+
+                <p>
+                    Select a category below to browse different
+                    types of projects. See something you like?
+                    Send us the photo and tell us how you would
+                    like to make it your own.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FILTER BUTTONS
+    ================================================= -->
+
+    <section class="gallery-filter-section">
+
+        <div class="content-container">
+
+            <div
+                class="gallery-filters"
+                aria-label="Filter gallery"
+            >
+
+                <button
+                    class="gallery-filter-button active"
+                    data-filter="all"
+                    type="button"
+                >
+                    All
+                </button>
+
+                <button
+                    class="gallery-filter-button"
+                    data-filter="awards"
+                    type="button"
+                >
+                    Awards &amp; Plaques
+                </button>
+
+                <button
+                    class="gallery-filter-button"
+                    data-filter="gifts"
+                    type="button"
+                >
+                    Gifts
+                </button>
+
+                <button
+                    class="gallery-filter-button"
+                    data-filter="signs"
+                    type="button"
+                >
+                    Signs
+                </button>
+
+                <button
+                    class="gallery-filter-button"
+                    data-filter="drinkware"
+                    type="button"
+                >
+                    Drinkware
+                </button>
+
+                <button
+                    class="gallery-filter-button"
+                    data-filter="wood"
+                    type="button"
+                >
+                    Wood
+                </button>
+
+                <button
+                    class="gallery-filter-button"
+                    data-filter="glass"
+                    type="button"
+                >
+                    Glass
+                </button>
+
+                <button
+                    class="gallery-filter-button"
+                    data-filter="leather"
+                    type="button"
+                >
+                    Leather
+                </button>
+
+                <button
+                    class="gallery-filter-button"
+                    data-filter="custom"
+                    type="button"
+                >
+                    Custom Projects
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GALLERY
+    ================================================= -->
+
+    <section class="gallery-section">
+
+        <div class="content-container">
+
+            <div class="gallery-grid">
+
+
+                <!-- =====================================
+                     PROJECT 01
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="awards"
+                    data-title="Custom Engraved Plaque"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-01.jpg"
+                            alt="Custom engraved plaque"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Awards &amp; Plaques
+                        </span>
+
+                        <h2>
+                            Custom Engraved Plaque
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 02
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="wood"
+                    data-title="Personalized Wood Project"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-02.jpg"
+                            alt="Personalized laser engraved wood project"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Wood
+                        </span>
+
+                        <h2>
+                            Personalized Wood Project
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 03
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="glass"
+                    data-title="Engraved Glass"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-03.jpg"
+                            alt="Personalized laser engraved glass"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Glass
+                        </span>
+
+                        <h2>
+                            Engraved Glass
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 04
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="gifts"
+                    data-title="Personalized Gift"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-04.jpg"
+                            alt="Personalized engraved gift"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Gifts
+                        </span>
+
+                        <h2>
+                            Personalized Gift
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 05
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="drinkware"
+                    data-title="Custom Drinkware"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-05.jpg"
+                            alt="Custom engraved drinkware"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Drinkware
+                        </span>
+
+                        <h2>
+                            Custom Drinkware
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 06
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="leather"
+                    data-title="Engraved Leather"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-06.jpg"
+                            alt="Custom laser engraved leather item"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Leather
+                        </span>
+
+                        <h2>
+                            Engraved Leather
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 07
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="signs"
+                    data-title="Custom Engraved Sign"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-07.jpg"
+                            alt="Custom laser engraved sign"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Signs
+                        </span>
+
+                        <h2>
+                            Custom Engraved Sign
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 08
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="custom"
+                    data-title="Custom Project"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-08.jpg"
+                            alt="One of a kind custom laser engraving project"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Custom Projects
+                        </span>
+
+                        <h2>
+                            One of a Kind Project
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 09
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="wood"
+                    data-title="Engraved Wood Keepsake"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-09.jpg"
+                            alt="Laser engraved wood keepsake"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Wood
+                        </span>
+
+                        <h2>
+                            Engraved Wood Keepsake
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 10
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="gifts"
+                    data-title="Personalized Keepsake"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-10.jpg"
+                            alt="Personalized engraved keepsake"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Gifts
+                        </span>
+
+                        <h2>
+                            Personalized Keepsake
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 11
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="drinkware"
+                    data-title="Personalized Drinkware"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-11.jpg"
+                            alt="Personalized laser engraved drinkware"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Drinkware
+                        </span>
+
+                        <h2>
+                            Personalized Drinkware
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =====================================
+                     PROJECT 12
+                ====================================== -->
+
+                <article
+                    class="gallery-item"
+                    data-category="custom"
+                    data-title="Made to Order Project"
+                    tabindex="0"
+                >
+
+                    <div class="gallery-image">
+
+                        <img
+                            src="assets/images/gallery/project-12.jpg"
+                            alt="Made to order laser engraving project"
+                            loading="lazy"
+                        >
+
+                        <div class="gallery-image-overlay">
+
+                            <span class="gallery-view-icon">
+                                +
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item-content">
+
+                        <span class="gallery-category">
+                            Custom Projects
+                        </span>
+
+                        <h2>
+                            Made to Order Project
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SEND US YOUR IDEA
+    ================================================= -->
+
+    <section class="idea-cta">
+
+        <div class="content-container">
+
+            <div class="idea-cta-grid">
+
+
+                <div class="idea-content">
+
+                    <p class="section-eyebrow light">
+                        See Something You Like?
+                    </p>
+
+                    <h2>
+                        Make It Your Own.
+                    </h2>
+
+                    <p>
+                        Send us a screenshot or tell us which
+                        gallery project caught your eye. We can
+                        talk through your idea, personalization
+                        and material options.
+                    </p>
+
+
+                    <div class="idea-buttons">
+
+                        <a
+                            href="quote.html"
+                            class="button button-gold"
+                        >
+                            Request a Quote
+                        </a>
+
+                        <a
+                            href="custom-orders.html"
+                            class="button button-outline-light"
+                        >
+                            How Orders Work
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="idea-image">
+
+                    <img
+                        src="assets/images/contact-feature.jpg"
+                        alt="Custom laser engraving project"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div
+    class="gallery-lightbox"
+    id="galleryLightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Gallery image viewer"
+>
+
+    <div class="lightbox-content">
+
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+            type="button"
+            aria-label="Close image viewer"
+        >
+            &times;
+        </button>
+
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt=""
+        >
+
+
+        <p
+            class="lightbox-title"
+            id="lightboxTitle"
+        ></p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="content-container">
+
+        <div class="footer-grid">
+
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="assets/images/logo-white.png"
+                        alt="Lasered Treasure"
+                    >
+
+                </a>
+
+                <p>
+                    Custom laser engraving, personalized gifts,
+                    awards and custom projects in Portsmouth,
+                    Virginia.
+                </p>
+
+            </div>
+
+
+
+            <!-- Explore -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="what-we-engrave.html">
+                    What We Engrave
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="custom-orders.html">
+                    Custom Orders
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+            </div>
+
+
+
+            <!-- Help -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Help
+                </h3>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+                <a href="quote.html">
+                    Request a Quote
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Portsmouth, Virginia
+                </p>
+
+                <p>
+                    Serving Hampton Roads and beyond.
+                </p>
+
+                <a href="tel:+17573736646">
+                    (757) 373-6646
+                </a>
+
+                <a href="mailto:laseredtreasure@gmail.com">
+                    laseredtreasure@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy;
+                <span id="currentYear"></span>
+                Lasered Treasure. All rights reserved.
+            </p>
+
+            <p>
+                Custom laser engraving in Portsmouth, Virginia.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
